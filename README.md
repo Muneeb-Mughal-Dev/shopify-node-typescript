@@ -118,6 +118,8 @@ yarn create @shopify/app --template=node
 
 ```
 
+## **Installation for frontend**
+
 Remove the old frontend and create the new react project:
 
 ```bash
@@ -125,8 +127,6 @@ Remove the old frontend and create the new react project:
 cd web && rm -rd frontend && yarn create vite frontend --template react-ts cd frontend
 
 ```
-
-## **Installation for frontend**
 
 Install the require dependencies:
 
@@ -148,6 +148,40 @@ Initialize tailwindcss files using npx:
 
 ```bash
 npx tailwindcss init -p --ts
+```
+
+## **Installation for backend**
+
+Navigate to the web folder:
+
+```bash
+
+cd ../
+
+```
+
+Remove sqlite
+
+```bash
+
+yarn remove @shopify/shopify-app-session-storage-sqlite
+
+```
+
+Install the require dependencies:
+
+```bash
+
+yarn add @shopify/shopify-app-session-storage-mysql cors dotenv envalid joi knex mysql2 objection reflect-metadata serve-static swagger-jsdoc swagger-ui-express winston winston-daily-rotate-file
+
+```
+
+Install the require dev dependencies:
+
+```bash
+
+yarn add @trivago/prettier-plugin-sort-imports @types/compression @types/cors @types/express @types/node @types/nodemon @types/serve-static @types/swagger-jsdoc @types/swagger-ui-express @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier eslint-plugin-prettier nodemon prettier pretty-quick swagger-autogen ts-node tsc-alias tsconfig-paths typescript --dev
+
 ```
 
 **Running the Project**
