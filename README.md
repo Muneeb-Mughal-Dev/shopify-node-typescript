@@ -260,11 +260,6 @@ package-lock.json
 
 </details>
 
-<details>
-<summary><code>vite.config.ts</code></summary>
-
-<br/>
-
 ## Routing Configrations
 
 <details>
