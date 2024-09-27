@@ -70,8 +70,6 @@ The following Shopify tools complement these third-party tools to ease app devel
 
 - **Node.js**: Leverage the power of server-side JavaScript to handle backend processes seamlessly.
 
-- **Node.js**: Leverage the power of server-side JavaScript to handle backend processes seamlessly.
-
 - **TypeScript**: Enhance code quality and maintainability with static typing, catching errors during development.
 
 - **Knex**: Utilize a powerful SQL query builder for flexible database interactions, making data management straightforward.
