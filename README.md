@@ -26,6 +26,7 @@
 3. 🔋 [Features](#features)
 4. 🤸 [Quick Start](#quick-start)
 5. 🕸️ [Snippets (Code to Copy)](#snippets)
+6. [Files (Code Download links)](#files)
 
 ## <a name="introduction">🤖 Introduction</a>
 
@@ -322,6 +323,11 @@ Remove these files
 rm -rf indec.js product-create.js shopify.js gdpr.js privacy.js
 
 ```
+
+## <a name="files">🕸️ Necessary files</a>
+
+- Backend code need to be placed in the web/ dir <a href="#">Click Here</a>
+- Frontend code need to be placed in the web/frontend/ dir <a href="#">Click Here</a>
 
 **Running the Project**
 
