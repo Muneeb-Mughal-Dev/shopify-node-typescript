@@ -197,6 +197,70 @@ cd ../
 ## Root Files
 
 <details>
+<summary><code>Update .gitignore file</code></summary>
+
+<br/>
+
+```json
+
+# Environment Configuration
+.env
+.env.*
+
+# dependencies
+node_modules
+.pnp
+.pnp.js
+dist
+
+# Test coverage directory
+coverage
+
+# Ignore Apple macOS Desktop Services Store
+.DS_Store
+
+# debug
+logs
+*.log
+yarn.lock
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+lerna-debug.log*
+
+# ngrok tunnel file
+config/tunnel.pid
+
+# build output
+dist
+build
+
+# extensions build output
+extensions/*/build
+
+# Node library SQLite database
+web/database.sqlite
+
+# configs toml
+fly.toml
+
+# shopify.app.toml
+shopify.app.develop.toml
+
+# Json
+package-lock.json
+!.vscode/extensions.json
+
+# Ignore shopify files created during app dev
+.shopify/*
+.shopify.lock
+
+```
+
+</details>
+
+<details>
 <summary><code>vite.config.ts</code></summary>
 
 <br/>
@@ -220,53 +284,6 @@ export default defineConfig(() => {
     },
   };
 });
-```
-
-</details>
-
-<details>
-<summary><code>.gitignore</code></summary>
-
-<br/>
-
-```json
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# production
-/build
-/dist
-
-# misc
-.DS_Store
-*.pem
-
-
-# debug
-logs
-*.log
-yarn.lock
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-lerna-debug.log*
-tsconfig.tsbuildinfo
-# local env files
-.env*.local
-.env
-
-.vscode
-.contentlayer
-
-# Json
-package-lock.json
-!.vscode/extensions.json
 ```
 
 </details>
