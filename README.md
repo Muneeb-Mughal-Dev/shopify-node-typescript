@@ -110,10 +110,12 @@ Follow these steps to set up the project locally on your machine.
 
 - [yarn](https://classic.yarnpkg.com/lang/en/docs/install/) or [npm](https://www.npmjs.com/) (Node Package Manager)
 
-**Initalize the project using Vite + Typescript**
+**Initalize the project using Shopify cli command**
 
 ```bash
-npm create vite@latest
+
+yarn create @shopify/app --template=node
+
 ```
 
 **Installation**
