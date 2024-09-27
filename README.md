@@ -1,24 +1,43 @@
-# Shopify App Template for Node
+<div align="center">
+  <br />
+# Shopify App Template for Node + Typescript + React
+  <h2>This is a template for building a [Shopify app](https://shopify.dev/docs/apps/getting-started) using Node and React. It contains the basics for building a Shopify app.</h2>
+  <br />
 
-This is a template for building a [Shopify app](https://shopify.dev/docs/apps/getting-started) using Node and React. It contains the basics for building a Shopify app.
+  <div>
+    <img src="https://img.shields.io/badge/-shopify?style=for-the-badge&logoColor=white&logo=shopify&color=7AB55C" alt="shopify" />
+    <img src="https://img.shields.io/badge/-VITE-black?style=for-the-badge&logoColor=white&logo=vite&color=747bff" alt="vite" />
+    <img src="https://img.shields.io/badge/-REACT_JS-black?style=for-the-badge&logoColor=white&logo=react&color=58c4dc" alt="react.js" />
+    <img src="https://img.shields.io/badge/-REACT_ROUTER_DOM-black?style=for-the-badge&logoColor=white&logo=reactrouter&color=f44250" alt="react-router-dom" />
+    <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178c6" alt="typescript" />
+    <img src="https://img.shields.io/badge/-PRETTIER-black?style=for-the-badge&logoColor=white&logo=prettier&color=f8bc45" alt="prettier" />
+    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
+  </div>
 
-Rather than cloning this repo, you can use your preferred package manager and the Shopify CLI with [these steps](#installing-the-template).
+  <h3 align="center">A Collaborative LiveDocs</h3>
 
-## Benefits
+  <div align="center">
+    Build React projects with this awesome boilerplate. Join the JSM family!
+  </div>
+</div>
 
-Shopify apps are built on a variety of Shopify tools to create a great merchant experience. The [create an app](https://shopify.dev/docs/apps/getting-started/create) tutorial in our developer documentation will guide you through creating a Shopify app using this template.
+## 📋 <a name="table">Table of Contents</a>
 
-The Node app template comes with the following out-of-the-box functionality:
+1. 🤖 [Introduction](#introduction)
+2. ⚙️ [Tech Stack](#tech-stack)
+3. 🔋 [Features](#features)
+4. 🤸 [Quick Start](#quick-start)
+5. 🕸️ [Snippets (Code to Copy)](#snippets)
 
-- OAuth: Installing the app and granting permissions
-- GraphQL Admin API: Querying or mutating Shopify admin data
-- REST Admin API: Resource classes to interact with the API
-- Shopify-specific tooling:
-  - AppBridge
-  - Polaris
-  - Webhooks
+## <a name="introduction">🤖 Introduction</a>
 
-## Tech Stack
+Built with Vite and React to handle the user interface and styled with TailwindCSS, this boilerplate is designed for React frontend projects. The primary goal is to showcase a developer’s skills in a real-time environment and create a lasting impact.
+
+If you need assistance or encounter any issues, feel free to reach out via email.
+
+<a href="mailto:muneebmughal342@gmail.com" target="_blank"><img src="https://img.shields.io/badge/-Contact-black?style=for-the-badge&logoColor=white&logo=gmail&color=f67373" alt="mail" /></a>
+
+## <a name="tech-stack">⚙️ Tech Stack</a>
 
 This template combines a number of third party open-source tools:
 
@@ -42,202 +61,1082 @@ The following Shopify tools complement these third-party tools to ease app devel
 - [File-based routing](https://github.com/Shopify/shopify-frontend-template-react/blob/main/Routes.jsx) makes creating new pages easier.
 - [`@shopify/i18next-shopify`](https://github.com/Shopify/i18next-shopify) is a plugin for [`i18next`](https://www.i18next.com/) that allows translation files to follow the same JSON schema used by Shopify [app extensions](https://shopify.dev/docs/apps/checkout/best-practices/localizing-ui-extensions#how-it-works) and [themes](https://shopify.dev/docs/themes/architecture/locales/storefront-locale-files#usage).
 
-## Getting started
+## <a name="features">🔋 Features</a>
 
-### Requirements
+👉 **Theme**: Custom theme with contexts to manage and switch between light and dark modes.
 
-1. You must [download and install Node.js](https://nodejs.org/en/download/) if you don't already have it.
-1. You must [create a Shopify partner account](https://partners.shopify.com/signup) if you don’t have one.
-1. You must create a store for testing if you don't have one, either a [development store](https://help.shopify.com/en/partners/dashboard/development-stores#create-a-development-store) or a [Shopify Plus sandbox store](https://help.shopify.com/en/partners/dashboard/managing-stores/plus-sandbox-store).
+👉 **Routing**
 
-### Installing the template
+- **File-based Routing**: Handles file-based routing.
+- **Dynamic Routes**: Supports dynamic routing.
+- **Layouts**: Manages multiple layouts.
+- **404 Pages**: Configures custom 404 pages.
 
-This template can be installed using your preferred package manager:
+👉 **Storage**: Includes an instance for managing local storage.
 
-Using yarn:
+👉 **Marquee**: Integrated marquee slider for scrolling text or images.
 
-```shell
-yarn create @shopify/app --template=node
+👉 **Code Architecture**: Emphasizes modularity and reusability of code.
+
+## <a name="quick-start">🤸 Quick Start</a>
+
+Follow these steps to set up the project locally on your machine.
+
+**Prerequisites**
+
+Make sure you have the following installed on your machine:
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en)
+- [npm](https://www.npmjs.com/) (Node Package Manager)
+
+**Initalize the project using Vite + Typescript**
+
+```bash
+npm create vite@latest
 ```
 
-Using npm:
+**Installation**
 
-```shell
-npm init @shopify/app@latest -- --template=node
+Install the project dependencies using npm:
+
+```bash
+npm install
 ```
 
-Using pnpm:
+Install the require dependencies using npm:
 
-```shell
-pnpm create @shopify/app@latest --template=node
+```bash
+npm install react-router-dom lucide-react
 ```
 
-This will clone the template and install the required dependencies.
+Install the require dev dependencies using npm:
 
-#### Local Development
-
-[The Shopify CLI](https://shopify.dev/docs/apps/tools/cli) connects to an app in your Partners dashboard. It provides environment variables, runs commands in parallel, and updates application URLs for easier development.
-
-You can develop locally using your preferred package manager. Run one of the following commands from the root of your app.
-
-Using yarn:
-
-```shell
-yarn dev
+```bash
+npm install -D @trivago/prettier-plugin-sort-imports @types/node prettier prettier-plugin-tailwindcss tailwind-merge tailwindcss tailwindcss-animate @tailwindcss/typography postcss autoprefixer
 ```
 
-Using npm:
+Initialize tailwindcss files using npx:
 
-```shell
+```bash
+npx tailwindcss init -p --ts
+```
+
+**Running the Project**
+
+```bash
 npm run dev
 ```
 
-Using pnpm:
+Open [http://localhost:3000](http://localhost:5173) in your browser to view the project.
 
-```shell
-pnpm run dev
+## <a name="snippets">🕸️ Snippets</a>
+
+## Root Files
+
+<details>
+<summary><code>vite.config.ts</code></summary>
+
+<br/>
+
+```typescript
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
+
+// https://vitejs.dev/config/
+export default defineConfig(() => {
+  return {
+    plugins: [react()],
+    resolve: {
+      alias: [
+        {
+          find: "@src/",
+          replacement: path.resolve(process.cwd(), "src") + "/",
+        },
+      ],
+    },
+  };
+});
 ```
 
-Open the URL generated in your console. Once you grant permission to the app, you can start development.
+</details>
 
-## Deployment
+<details>
+<summary><code>.gitignore</code></summary>
 
-### Application Storage
+<br/>
 
-This template uses [SQLite](https://www.sqlite.org/index.html) to store session data. The database is a file called `database.sqlite` which is automatically created in the root. This use of SQLite works in production if your app runs as a single instance.
+```json
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
 
-The database that works best for you depends on the data your app needs and how it is queried. You can run your database of choice on a server yourself or host it with a SaaS company. Here’s a short list of databases providers that provide a free tier to get started:
+# testing
+/coverage
 
-| Database   | Type             | Hosters                                                                                                                                                                                                                               |
-| ---------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| MySQL      | SQL              | [Digital Ocean](https://www.digitalocean.com/try/managed-databases-mysql), [Planet Scale](https://planetscale.com/), [Amazon Aurora](https://aws.amazon.com/rds/aurora/), [Google Cloud SQL](https://cloud.google.com/sql/docs/mysql) |
-| PostgreSQL | SQL              | [Digital Ocean](https://www.digitalocean.com/try/managed-databases-postgresql), [Amazon Aurora](https://aws.amazon.com/rds/aurora/), [Google Cloud SQL](https://cloud.google.com/sql/docs/postgres)                                   |
-| Redis      | Key-value        | [Digital Ocean](https://www.digitalocean.com/try/managed-databases-redis), [Amazon MemoryDB](https://aws.amazon.com/memorydb/)                                                                                                        |
-| MongoDB    | NoSQL / Document | [Digital Ocean](https://www.digitalocean.com/try/managed-databases-mongodb), [MongoDB Atlas](https://www.mongodb.com/atlas/database)                                                                                                  |
+# production
+/build
+/dist
 
-To use one of these, you need to change your session storage configuration. To help, here’s a list of [SessionStorage adapter packages](https://github.com/Shopify/shopify-api-js/blob/main/packages/shopify-api/docs/guides/session-storage.md).
+# misc
+.DS_Store
+*.pem
 
-### Build
 
-The frontend is a single page app. It requires the `SHOPIFY_API_KEY`, which you can find on the page for your app in your partners dashboard. Paste your app’s key in the command for the package manager of your choice:
+# debug
+logs
+*.log
+yarn.lock
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+lerna-debug.log*
+tsconfig.tsbuildinfo
+# local env files
+.env*.local
+.env
 
-Using yarn:
+.vscode
+.contentlayer
 
-```shell
-cd web/frontend/ && SHOPIFY_API_KEY=REPLACE_ME yarn build
+# Json
+package-lock.json
+!.vscode/extensions.json
 ```
 
-Using npm:
+</details>
 
-```shell
-cd web/frontend/ && SHOPIFY_API_KEY=REPLACE_ME npm run build
+<details>
+<summary><code>tsconfig.app.json</code></summary>
+
+<br/>
+
+```json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@src/*": ["*"]
+    }
+  },
+  "include": [
+    "src/**/*.json",
+    "vite.config.ts",
+    "src/**/*.jpeg",
+    "src/**/*.png",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./src/**/*.d.ts",
+    "./src/types/global.d.ts",
+    "src/types/vite-env.d.ts",
+    "src/routes/routes.ts"
+  ]
+}
 ```
 
-Using pnpm:
+</details>
 
-```shell
-cd web/frontend/ && SHOPIFY_API_KEY=REPLACE_ME pnpm run build
+<details>
+<summary><code>.prettierignore</code></summary>
+
+<br/>
+
+```json
+dist
+node_modules
+build
+.contentlayer
 ```
 
-You do not need to build the backend.
+</details>
 
-## Hosting
+<details>
+<summary><code>eslint.config.js</code></summary>
 
-When you're ready to set up your app in production, you can follow [our deployment documentation](https://shopify.dev/docs/apps/deployment/web) to host your app on a cloud provider like [Heroku](https://www.heroku.com/) or [Fly.io](https://fly.io/).
+<br/>
 
-When you reach the step for [setting up environment variables](https://shopify.dev/docs/apps/deployment/web#set-env-vars), you also need to set the variable `NODE_ENV=production`.
+```javascript
+import js from "@eslint/js";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import tailwindcssPlugin from "eslint-plugin-tailwindcss";
+import globals from "globals";
+import tseslint from "typescript-eslint";
 
-## Known issues
-
-### Hot module replacement and Firefox
-
-When running the app with the CLI in development mode on Firefox, you might see your app constantly reloading when you access it.
-That happened in previous versions of the CLI, because of the way HMR websocket requests work.
-
-We fixed this issue with v3.4.0 of the CLI, so after updating it, you can make the following changes to your app's `web/frontend/vite.config.js` file:
-
-1. Change the definition `hmrConfig` object to be:
-
-   ```js
-   const host = process.env.HOST
-     ? process.env.HOST.replace(/https?:\/\//, "")
-     : "localhost";
-
-   let hmrConfig;
-   if (host === "localhost") {
-     hmrConfig = {
-       protocol: "ws",
-       host: "localhost",
-       port: 64999,
-       clientPort: 64999,
-     };
-   } else {
-     hmrConfig = {
-       protocol: "wss",
-       host: host,
-       port: process.env.FRONTEND_PORT,
-       clientPort: 443,
-     };
-   }
-   ```
-
-1. Change the `server.host` setting in the configs to `"localhost"`:
-
-   ```js
-   server: {
-     host: "localhost",
-     ...
-   ```
-
-### I can't get past the ngrok "Visit site" page
-
-When you’re previewing your app or extension, you might see an ngrok interstitial page with a warning:
-
-```text
-You are about to visit <id>.ngrok.io: Visit Site
+export default tseslint.config(
+  { ignores: ["dist"] },
+  {
+    extends: [
+      js.configs.recommended,
+      ...tseslint.configs.recommended,
+      "prettier",
+      "eslint:recommended",
+      "plugin:react-hooks/recommended",
+      "plugin:tailwindcss/recommended",
+      "plugin:@typescript-eslint/recommended",
+    ],
+    ignorePatterns: ["dist", ".eslintrc.cjs"],
+    parser: "@typescript-eslint/parser",
+    files: ["./src**/*.{ts,tsx}"],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+    },
+    plugins: {
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
+      tailwindcss: tailwindcssPlugin,
+    },
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      "tailwindcss/no-custom-classname": "off",
+      "tailwindcss/classnames-order": "error",
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true },
+      ],
+    },
+    settings: {
+      tailwindcss: {
+        callees: ["cn"],
+        config: "tailwind.config.js",
+      },
+    },
+    overrides: [
+      {
+        files: ["*.ts", "*.tsx"],
+        parser: "@typescript-eslint/parser",
+      },
+    ],
+  }
+);
 ```
 
-If you click the `Visit Site` button, but continue to see this page, then you should run dev using an alternate tunnel URL that you run using tunneling software.
-We've validated that [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/run-tunnel/trycloudflare/) works with this template.
+</details>
+<details>
+<summary><code>prettier.config.js</code></summary>
 
-To do that, you can [install the `cloudflared` CLI tool](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/), and run:
+<br/>
 
-```shell
-# Note that you can also use a different port
-cloudflared tunnel --url http://localhost:3000
+**Reload the vs code after creating this file or updating this file**
+
+```shortcut
+Press ctrl+shift+p or command+shift+p
 ```
 
-Out of the logs produced by cloudflare you will notice a https URL where the domain ends with `trycloudflare.com`. This is your tunnel URL. You need to copy this URL as you will need it in the next step.
+Then select **`reload window`**
 
-```shell
-2022-11-11T19:57:55Z INF Requesting new quick Tunnel on trycloudflare.com...
-2022-11-11T19:57:58Z INF +--------------------------------------------------------------------------------------------+
-2022-11-11T19:57:58Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
-2022-11-11T19:57:58Z INF |  https://randomly-generated-hostname.trycloudflare.com                                     |
-2022-11-11T19:57:58Z INF +--------------------------------------------------------------------------------------------+
+```javascript
+/**
+ * @see https://prettier.io/docs/en/configuration.html
+ * @type {import("prettier").Config}
+ */
+
+const config = {
+  trailingComma: "es5",
+  tabWidth: 2,
+  semi: false,
+  singleQuote: true,
+  plugins: [
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss",
+  ],
+  tailwindFunctions: ["clsx", "tw", "cn"],
+  tailwindConfig: "./tailwind.config.ts",
+  tailwindAttributes: ["className", "classNames"],
+  importOrderSortSpecifiers: true,
+  importOrder: [
+    "^(react/(.*)$)|^(react$)",
+    "<THIRD_PARTY_MODULES>",
+    "^types$",
+    "^@src/config/(.*)$",
+    "^@src/theme/(.*)$",
+    "^@src/constants/(.*)$",
+    "^@src/contexts/(.*)$",
+    "^@src/hooks",
+    "^@src/hooks/(.*)$",
+    "^@src/routes/(.*)$",
+    "^@src/layouts/(.*)$",
+    "^@src/pages/(.*)$",
+    "^@src/components/(.*)$",
+    "^@src/components/ui/(.*)$",
+    "^@src/components/pages/(.*)$",
+    "^@src/utils/(.*)$",
+    "^@src/types/(.*)$",
+    "^@src/assets/images/(.*)$",
+    "^@src/assets/styles/(.*)$",
+    "^[./]",
+  ],
+};
+
+export default config;
 ```
 
-Below you would replace `randomly-generated-hostname` with what you have copied from the terminal. In a different terminal window, navigate to your app's root and with the URL from above you would call:
+</details>
 
-```shell
-# Using yarn
-yarn dev --tunnel-url https://randomly-generated-hostname.trycloudflare.com:3000
-# or using npm
-npm run dev --tunnel-url https://randomly-generated-hostname.trycloudflare.com:3000
-# or using pnpm
-pnpm dev --tunnel-url https://randomly-generated-hostname.trycloudflare.com:3000
+<details>
+<summary><code>tailwind.config.ts</code></summary>
+
+<br/>
+
+**`Update this file after create the theme`**
+
+```typescript
+import tailwindcssTypography from "@tailwindcss/typography";
+import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
+import {
+  animation,
+  boxShadow,
+  colors,
+  fontFamily,
+  keyframes,
+} from "./src/theme";
+
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      colors: colors,
+      animation: animation,
+      fontFamily: fontFamily,
+      keyframes: keyframes,
+      boxShadow: boxShadow,
+    },
+  },
+  plugins: [tailwindcssAnimate, tailwindcssTypography()],
+} satisfies Config;
 ```
 
-## Developer resources
+</details>
 
-- [Introduction to Shopify apps](https://shopify.dev/docs/apps/getting-started)
-- [App authentication](https://shopify.dev/docs/apps/auth)
-- [Shopify CLI](https://shopify.dev/docs/apps/tools/cli)
-- [Shopify API Library documentation](https://github.com/Shopify/shopify-api-js#readme)
-- [Getting started with internationalizing your app](https://shopify.dev/docs/apps/best-practices/internationalization/getting-started)
-  - [i18next](https://www.i18next.com/)
-    - [Configuration options](https://www.i18next.com/overview/configuration-options)
-  - [react-i18next](https://react.i18next.com/)
-    - [`useTranslation` hook](https://react.i18next.com/latest/usetranslation-hook)
-    - [`Trans` component usage with components array](https://react.i18next.com/latest/trans-component#alternative-usage-components-array)
-  - [i18n-ally VS Code extension](https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally)
+<details>
+<summary><code>package.json</code></summary>
+
+<br/>
+
+```json
+    "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "prettier:fix": "npx prettier --write src/."
+  },
+  "engines": {
+    "node": ">=18.20.4"
+  },
+```
+
+</details>
+
+## Global Types
+
+<details>
+<summary><code>global.d.ts</code></summary>
+<br/>
+  
+**`Make sure to move vite-env.d.ts file into ./src/types dir`**
+<br/>
+
+`Dir and file` ./src/types/global.d.ts
+
+```typescript
+declare type PageModule = {
+  default: React.ComponentType;
+};
+
+declare type Pages = {
+  [key: string]: PageModule;
+};
+
+declare interface Route {
+  element: ComponentType;
+  layout?: string;
+  path: string;
+  children?: Route[];
+}
+
+declare interface GroupRoute {
+  path?: string;
+  children?: Route[];
+  element: ComponentType;
+}
+
+declare interface GroupLayoutRoute {
+  children: GroupRoute[];
+  element: ComponentType | null;
+}
+
+declare interface Children {
+  children: ReactNode;
+}
+declare interface ChildrenWithElement extends Children {
+  as?: ElementType;
+}
+
+declare type Theme = "light" | "dark";
+
+declare type InputChangeEvent = ChangeEvent<HTMLInputElement>;
+
+declare type ErrorType = {
+  name: string | null;
+  state: boolean;
+  message: string | null;
+};
+
+declare type ToastProps = {
+  message: string;
+  type: "success" | "warning" | "error";
+  state: boolean;
+};
+```
+
+</details>
+
+## Theme File
+
+<details>
+<summary><code>Global Css</code></summary>
+<br/>
+
+`Dir and file` ./src/assete/styles/global-colors.css
+<br/>
+
+```css
+/* ------------------------ GLOBAL-VARIABLES-FOR-THEME ------------------------ */
+
+:root {
+  --background: 0, 0%, 100%;
+  --background-variant-lighter: 0, 0%, 95%;
+  --background-variant-light: 0, 0%, 90%;
+  --background-variant-dark: 0, 0%, 85%;
+
+  --foreground: 0, 0%, 0%;
+  --foreground-variant-lighter: 0, 0%, 85%;
+  --foreground-variant-light: 0, 0%, 50%;
+  --foreground-variant-dark: 0, 0%, 30%;
+
+  --primary: 224, 76%, 48%;
+  --primary-variant-dark: 193, 100%, 22%;
+  --primary-variant-light: 192, 100%, 31%;
+
+  --secondary: 188.9, 148.3%, 26.6%;
+  --secondary-variant-light: 188.9, 98.16%, 35.04%;
+  --secondary-variant-dark: 188.9, 99.01%, 21.84%;
+
+  --destructive: 0, 100%, 50%;
+
+  --muted: 210, 40%, 96.1%;
+  --muted-foreground: 215.4, 16.3%, 46.9%;
+
+  --popover: 0, 0%, 0%, 30%;
+
+  --info: 190, 90%, 50%;
+  --success: 152, 69%, 31%;
+  --warning: 45, 100%, 51%;
+}
+.dark {
+  --background: 220, 11%, 11%;
+  --background-variant-light: 220, 11%, 10%;
+  --background-variant-lighter: 220, 11%, 8%;
+  --background-variant-dark: 220, 11%, 7%;
+
+  --foreground: 0, 0%, 100%;
+  --foreground-variant-lighter: 0, 0%, 30%;
+  --foreground-variant-light: 0, 0%, 50%;
+  --foreground-variant-dark: 0, 0%, 85%;
+
+  --primary: 224, 76%, 48%;
+  --primary-variant-dark: 193, 100%, 22%;
+  --primary-variant-light: 192, 100%, 31%;
+
+  --secondary: 188.9, 148.3%, 26.6%;
+  --secondary-variant-light: 188.9, 98.16%, 35.04%;
+  --secondary-variant-dark: 188.9, 99.01%, 21.84%;
+
+  --destructive: 0, 63%, 31%;
+
+  --muted: 223, 47%, 11%;
+  --muted-foreground: 215.4, 16.3%, 56.9%;
+
+  --popover: 240, 3.8%, 46.1%, 10%;
+}
+```
+
+</details>
+
+<details>
+<summary><code>Marquee Css</code></summary>
+<br/>
+
+`Dir and file` ./src/assete/styles/marquee.css
+<br/>
+
+```css
+/* ------------------------ MARQUEE-SLIDER-STYLES ------------------------ */
+
+@layer utilities {
+  .marquee {
+    @apply max-w-max overflow-hidden;
+  }
+
+  .marquee[data-direction="right"] {
+    --_animation-direction: reverse;
+  }
+
+  .marquee[data-direction="left"] {
+    --_animation-direction: forwards;
+  }
+
+  .marquee_inner {
+    @apply flex flex-wrap gap-6 py-3;
+  }
+
+  .marquee[data-animated="true"] .marquee_inner {
+    @apply w-max animate-marquee flex-nowrap;
+  }
+
+  .marquee[data-animated="true"] {
+    -webkit-mask: linear-gradient(
+      90deg,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+    );
+    mask: linear-gradient(
+      90deg,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+    );
+  }
+}
+```
+
+</details>
+
+<details>
+<summary><code>Main Css</code></summary>
+<br/>
+
+`Dir and file` ./src/assete/styles/index.css
+<br/>
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "./marquee.css";
+@import "./global-colors.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------ GLOBAL-STYLES ------------------------ */
+
+body {
+  @apply bg-background font-body font-normal text-foreground antialiased transition-all duration-150 ease-out;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+```
+
+</details>
+
+<details>
+<summary><code>Theme Context</code></summary>
+<br/>
+
+`Dir and file` ./src/contexts/themeContext/ThemeContext.tsx
+<br/>
+
+```typescript
+import { createContext } from "react";
+
+type ThemeContextType = {
+  theme: Theme;
+  themeToggler: () => void;
+};
+
+export const ThemeContext = createContext<ThemeContextType | undefined>(
+  undefined
+);
+```
+
+</details>
+<details>
+<summary><code>Theme Provider</code></summary>
+<br/>
+
+`Dir and file` ./src/contexts/themeContext/ThemeProvider.tsx
+<br/>
+
+```typescript
+import { ReactNode, useEffect, useState } from "react";
+
+import { storage } from "@src/utils/storage";
+import { CURRENT_THEME } from "@src/utils/storage/variables";
+import { ThemeContext } from "@src/contexts/themeContext/ThemeContext";
+
+interface ThemeProviderProps {
+  children: ReactNode;
+}
+
+export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+
+  useEffect(() => {
+    const currentTheme = storage.get(CURRENT_THEME) as "light" | "dark" | null;
+    if (currentTheme) {
+      setTheme(currentTheme);
+    }
+  }, []);
+
+  useEffect(() => {
+    const body = document.getElementsByTagName("body")[0];
+    body.classList.remove("light", "dark");
+    body.classList.add(theme);
+  }, [theme]);
+
+  const themeToggler = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    storage.set(CURRENT_THEME, newTheme);
+  };
+
+  return (
+    <ThemeContext.Provider value={{ theme, themeToggler }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
+```
+
+</details>
+
+<details>
+<summary><code>Theme Context</code></summary>
+<br/>
+
+`Dir and file` ./src/contexts/themeContext/index.ts
+<br/>
+
+```typescript
+export { ThemeContext } from "@src/contexts/themeContext/ThemeContext";
+export { ThemeProvider } from "@src/contexts/themeContext/ThemeProvider";
+```
+
+</details>
+
+<details>
+<summary><code>Theme Hook</code></summary>
+<br/>
+
+`Dir and file` ./src/hooks/useTheme.tsx
+<br/>
+
+```typescript
+import { useContext } from "react";
+import { ThemeContext } from "@src/contexts/themeContext";
+
+export const useTheme = () => {
+  const context = useContext(ThemeContext);
+
+  if (!context) throw new Error("useTheme must be used within a ThemeProvider");
+
+  return context;
+};
+```
+
+</details>
+
+<details>
+<summary><code>Theme Toggler</code></summary>
+<br/>
+*Note that im using a global button component here feel free to replace this with you own*
+<br/>
+`Dir and file` ./src/components/themeToggler/ThemeToggler.tsx
+<br/>
+
+```typescript
+import { useTheme } from "@src/hooks";
+import { Button, Icon } from "@src/components/ui";
+
+export const ThemeToggler = () => {
+  const { theme, themeToggler } = useTheme();
+
+  return (
+    <Button after shadow size="xs" onClick={themeToggler}>
+      <Icon name={theme === "dark" ? "sun-medium" : "moon-star"} size={18} />
+    </Button>
+  );
+};
+```
+
+</details>
+
+## Routing Configrations
+
+<details>
+<summary><code>Utils functions for router</code></summary>
+<br/>
+
+`Dir and file` ./src/utils/router/normalizePath.ts
+<br/>
+
+```typescript
+export const normalizePath = (path: string): string => {
+  const normalizedPath = path
+    .replace(/^\.\/pages/, "") // Remove the base folder
+    .replace(/\.(t|j)sx?$/, "") // Remove the file extension
+    .replace(/\/page$/, "") // Remove /page for routes
+    // .replace(/\/layout$/, "") // Remove /layout for routes
+    .replace(/\[(?:[.]{3})?(\w+?)\]/g, (_match, param) => `:${param}`) // Dynamic route
+    .replace(/\[\[([.\w]+?)\]\]/g, (_match, param) => `:${param}*`) // Catch-all route
+    .replace(/\/$/, ""); // Remove trailing slash
+
+  if (normalizedPath === "") {
+    return "/";
+  }
+
+  return normalizedPath;
+};
+```
+
+</details>
+
+<details>
+<summary><code>Utils functions for router</code></summary>
+<br/>
+
+`Dir and file` ./src/utils/router/groupRoutes.ts
+<br/>
+
+```typescript
+import { normalizePath } from "@src/utils/router";
+
+export const groupRoutes = (pages: Pages): Route[] => {
+  const routes: Route[] = [];
+
+  Object.keys(pages).forEach((key) => {
+    const path = normalizePath(key);
+    const segments = path.split("/");
+    let currentPath = "";
+
+    segments.forEach((segment) => {
+      if (segment.startsWith("(") && segment.endsWith(")")) {
+        return;
+      }
+      currentPath += `/${segment}`;
+    });
+    if (!key.endsWith("layout.tsx") && pages[key].default) {
+      routes.push({
+        path: currentPath,
+        element: pages[key].default,
+        layout: segments[1],
+      });
+    }
+  });
+
+  return routes;
+};
+```
+
+</details>
+
+<details>
+<summary><code>Utils functions for router</code></summary>
+<br/>
+
+`Dir and file` ./src/utils/router/nestedRoutes.ts
+<br/>
+
+```typescript
+import { normalizePath } from "@src/utils/router";
+
+export const nestedRoutes = (
+  routes: Route[],
+  pages: Pages
+): GroupLayoutRoute => {
+  const nestedRoutes: GroupLayoutRoute = { children: [], element: null };
+
+  const addLayouts: GroupRoute[] = [];
+
+  Object.keys(pages).forEach((key) => {
+    const path = normalizePath(key);
+    const segments = path.split("/")[1];
+    if (key === `./pages/${segments}/layout.tsx`) {
+      addLayouts.push({
+        element: pages[`./pages/${segments}/layout.tsx`]?.default,
+        children: routes.filter((route) => {
+          return route.layout === segments;
+        }),
+      });
+    }
+    if (segments === "layout") {
+      nestedRoutes.element = pages[key].default;
+      nestedRoutes.children = addLayouts.length > 0 ? addLayouts : routes;
+    }
+  });
+
+  if (!nestedRoutes.children.length) {
+    nestedRoutes.children = routes;
+  }
+
+  return nestedRoutes;
+};
+```
+
+</details>
+
+<details>
+<summary><code>Utils functions for router</code></summary>
+<br/>
+
+`Dir and file` ./src/utils/router/index.ts.ts
+<br/>
+
+```typescript
+export * from "@src/utils/router/groupRoutes";
+export * from "@src/utils/router/nestedRoute";
+export * from "@src/utils/router/normalizePath";
+```
+
+</details>
+
+<details>
+<summary><code>Router hook</code></summary>
+<br/>
+
+`Dir and file` ./src/hooks/useRouter.tsx
+<br/>
+
+```typescript
+import { groupRoutes, nestedRoutes } from "@src/utils/router";
+
+export const useRouter = (pages: Pages): GroupLayoutRoute => {
+  const routes = groupRoutes(pages);
+  const nestedRoute = nestedRoutes(routes, pages);
+
+  return nestedRoute;
+};
+```
+
+</details>
+
+<details>
+<summary><code>hooks folder missing file</code></summary>
+<br/>
+
+`Dir and file` ./src/hooks/index.ts
+<br/>
+
+```typescript
+export * from "@src/hooks/useRouter";
+export * from "@src/hooks/useTheme";
+```
+
+</details>
+
+<details>
+<summary><code>Routes</code></summary>
+<br/>
+
+`Dir and file` ./src/router/router.ts
+<br/>
+
+```typescript
+import React from "react";
+import { createBrowserRouter, RouteObject } from "react-router-dom";
+import { NotFound } from "@src/components/pages/notFound/NotFound";
+
+export const router = (routes: GroupLayoutRoute) => {
+  const buildRoutes = (routes: GroupRoute[]): RouteObject[] => {
+    if (!routes) return [];
+
+    return routes.map((route: GroupRoute) => {
+      const { path, element, children } = route;
+
+      return {
+        path,
+        element: React.createElement(element),
+        children: children ? buildRoutes(children) : undefined,
+      };
+    });
+  };
+
+  const routesArray = routes ? buildRoutes(routes.children) : [];
+
+  const baseLayout: RouteObject[] = [
+    {
+      element: React.createElement(routes.element),
+      children: [
+        ...routesArray,
+        { path: "*", element: React.createElement(NotFound) },
+      ],
+    },
+  ];
+
+  return createBrowserRouter(baseLayout);
+};
+```
+
+</details>
+
+<details>
+<summary><code>Configure everything into App.tsx</code></summary>
+<br/>
+
+`Dir and file` ./src/App.tsx
+<br/>
+
+```typescript
+import { router } from '@src/router/router'
+import { RouterProvider } from 'react-router-dom'
+import { ThemeProvider } from '@src/contexts/themeContext'
+import { useRouter } from '@src/hooks'
+import { Loader } from '@src/components/ui/loader/Loader'
+import '@src/assets/styles/index.css'
+
+export const App = () => {
+  const pagesRaw = import.meta.glob('./pages/**/!(*.test.[jt]sx)*.([jt]sx)', {
+    eager: true,
+  })
+  const pages: Pages = Object.fromEntries(
+    Object.entries(pagesRaw).map(([key, module]) => [key, module as PageModule])
+  )
+  const routes = useRouter(pages)
+  const routerInstance = router(routes)
+
+  return (
+    <ThemeProvider>
+      <RouterProvider router={routerInstance} fallbackElement={<Loader />} />
+    </ThemeProvider>
+  )
+}
+```
+
+</details>
+
+## Storage Configrations
+
+<details>
+<summary><code>Utils functions for storage</code></summary>
+<br/>
+
+`Dir and file` ./src/utils/storage/storage.ts
+<br/>
+
+```typescript
+const DEFAULT_CACHE_TIME = 60 * 60 * 24 * 7;
+
+export default class Storage {
+  private storage: globalThis.Storage;
+  private prefixKey?: string;
+
+  constructor(prefixKey = "", storage = localStorage) {
+    this.storage = storage;
+    this.prefixKey = prefixKey;
+  }
+
+  private getKey(key: string) {
+    return `${this.prefixKey}${key}`.toUpperCase();
+  }
+
+  getAuthorization(key: string) {
+    return `Bearer ${this.get(key)}`;
+  }
+
+  isAuthenticated(key: string): boolean {
+    return !!localStorage.getItem(key);
+  }
+
+  set(key: string, value: any, expire: number | null = DEFAULT_CACHE_TIME) {
+    const stringData = JSON.stringify({
+      value,
+      expire: expire !== null ? new Date().getTime() + expire * 1000 : null,
+    });
+    this.storage.setItem(this.getKey(key), stringData);
+  }
+
+  get(key: string, def: any = null) {
+    const item = this.storage.getItem(this.getKey(key));
+    if (item) {
+      try {
+        const data = JSON.parse(item);
+        const { value, expire } = data;
+        if (expire === null || expire >= Date.now()) {
+          return value;
+        }
+        this.remove(key);
+      } catch (e) {
+        return def;
+      }
+    }
+    return def;
+  }
+
+  remove(key: string) {
+    this.storage.removeItem(this.getKey(key));
+  }
+}
+export const storage = new Storage("");
+```
+
+</details>
+
+<details>
+<summary><code>Utils functions for storage</code></summary>
+<br/>
+
+`Dir and file` ./src/utils//storage/variables.ts
+<br/>
+
+```typescript
+export const CURRENT_THEME = "CURRENT_THEME";
+```
+
+</details>
+
+<details>
+<summary><code>Utils functions for storage</code></summary>
+<br/>
+
+`Dir and file` ./src/utils//storage/index.ts.ts
+<br/>
+
+```typescript
+export * from "@src/utils/storage/storage";
+export * from "@src/utils/storage/variables";
+```
+
+</details>
