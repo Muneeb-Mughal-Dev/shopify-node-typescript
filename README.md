@@ -260,6 +260,35 @@ package-lock.json
 
 </details>
 
+<details>
+<summary><code>Add import alices into the package.json file</code></summary>
+
+<br/>
+
+```json
+
+"scripts": {
+    "shopify": "shopify",
+    "dev": "shopify app dev",
+    "info": "shopify app info",
+    "build": "shopify app build",
+    "deploy": "shopify app deploy",
+    "generate": "shopify app generate",
+    "extension": "shopify app generate extension",
+    "prettify": "cd web && npx prettier --write ./ && [ -d frontend ] && cd frontend && npx prettier --write ./",
+    "docs:generate": "cd web && node --no-warnings --loader ts-node/esm ./server/configs/swagger.ts",
+    "db:seed": "cd web && node --no-warnings --loader ts-node/esm node_modules/knex/bin/cli.js seed:run --knexfile=knexfile.ts --verbose",
+    "migration:run": "cd web && node --no-warnings --loader ts-node/esm node_modules/knex/bin/cli.js migrate:latest --knexfile=knexfile.ts --verbose",
+    "migration:fresh": "cd web && node --no-warnings --loader ts-node/esm node_modules/knex/bin/cli.js migrate:rollback --knexfile=knexfile.ts --verbose",
+    "migration:refresh": "cd web && node --no-warnings --loader ts-node/esm node_modules/knex/bin/cli.js migrate:rollback --knexfile=knexfile.ts --verbose && node --no-warnings --loader ts-node/esm node_modules/knex/bin/cli.js migrate:latest --knexfile=knexfile.ts --verbose",
+    "make:seeder": "cd web && node --no-warnings --loader ts-node/esm node_modules/knex/bin/cli.js seed:make --knexfile=knexfile.ts -x ts --env development",
+    "make:migration": "cd web && node --no-warnings --loader ts-node/esm node_modules/knex/bin/cli.js migrate:make --knexfile=knexfile.ts -x ts --env development"
+  },
+
+```
+
+</details>
+
 ## Web dir
 
 **Navigate to the web folder**
@@ -286,350 +315,13 @@ yarn add knex -g
 
 ```
 
+Remove these files
+
 ```bash
 
-knex init -x ts
+rm -rf indec.js product-create.js shopify.js gdpr.js privacy.js
 
 ```
-
-<details>
-<summary><code>Update .tsconfig.json file</code></summary>
-
-<br/>
-
-```json
-{
-  "compileOnSave": false,
-  "compilerOptions": {
-    "target": "ES2020",
-    "lib": ["ES2020", "esnext.asynciterable"],
-    "typeRoots": ["node_modules/@types"],
-    "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
-    "module": "ESNext",
-    "pretty": true,
-    "sourceMap": true,
-    "declaration": true,
-    "outDir": "./dist",
-    "allowJs": true,
-    "noEmit": false,
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "importHelpers": true,
-    "rootDir": "./",
-    "baseUrl": "./server",
-    "paths": {
-      "#server/*": ["*"],
-      "#shopify/*": ["shopify/*"],
-      "#configs/*": ["configs/*"],
-      "#utils/*": ["utils/*"],
-      "#routes/*": ["routes/*"],
-      "#schema/*": ["schema/*"],
-      "#database/*": ["database/*"],
-      "#services/*": ["services/*"],
-      "#enum/*": ["enum/*"],
-      "#models/*": ["models/*"],
-      "#exceptions/*": ["exceptions/*"],
-      "#interfaces/*": ["interfaces/*"],
-      "#controllers/*": ["controllers/*"],
-      "#mutations/*": ["mutations/*"],
-      "#middlewares/*": ["middlewares/*"],
-      "#docs/*": ["docs/*"]
-    }
-  },
-  "types": ["node"],
-  "include": [
-    "server/**/*.ts",
-    "server/**/*.json",
-    "*.json",
-    "server/**.json",
-    "*.yml",
-    "server/**.yml",
-    "*.yaml",
-    "server/**.yaml",
-    ".env"
-  ],
-  "exclude": ["node_modules", "dist"]
-}
-```
-
-</details>
-
-<details>
-<summary><code>Add import alices into the package.json file</code></summary>
-
-<br/>
-
-```json
-
-"imports": {
-        "#server/*": "./server/*.js",
-        "#shopify/*": "./server/shopify/*.js",
-        "#utils/*": "./server/utils/*.js",
-        "#configs/*": "./server/configs/*.js",
-        "#docs/*": "./server/docs/*",
-        "#routes/*": "./server/routes/*.js",
-        "#schema/*": "./server/schema/*.js",
-        "#database/*": "./server/database/*.js",
-        "#enum/*": "./server/enum/*.js",
-        "#services/*": "./server/services/*.js",
-        "#models/*": "./server/models/*.js",
-        "#exceptions/*": "./server/exceptions/*.js",
-        "#interfaces/*": "./server/interfaces/*.js",
-        "#controllers/*": "./server/controllers/*.js",
-        "#middlewares/*": "./server/middlewares/*.js",
-        "#mutations/*": "./server/mutations/*.js"
-    },
-
-```
-
-</details>
-
-## Routing Configrations
-
-<details>
-<summary><code>Utils functions for router</code></summary>
-<br/>
-
-`Dir and file` ./src/utils/router/normalizePath.ts
-<br/>
-
-```typescript
-export const normalizePath = (path: string): string => {
-  const normalizedPath = path
-    .replace(/^\.\/pages/, "") // Remove the base folder
-    .replace(/\.(t|j)sx?$/, "") // Remove the file extension
-    .replace(/\/page$/, "") // Remove /page for routes
-    // .replace(/\/layout$/, "") // Remove /layout for routes
-    .replace(/\[(?:[.]{3})?(\w+?)\]/g, (_match, param) => `:${param}`) // Dynamic route
-    .replace(/\[\[([.\w]+?)\]\]/g, (_match, param) => `:${param}*`) // Catch-all route
-    .replace(/\/$/, ""); // Remove trailing slash
-
-  if (normalizedPath === "") {
-    return "/";
-  }
-
-  return normalizedPath;
-};
-```
-
-</details>
-
-<details>
-<summary><code>Utils functions for router</code></summary>
-<br/>
-
-`Dir and file` ./src/utils/router/groupRoutes.ts
-<br/>
-
-```typescript
-import { normalizePath } from "@src/utils/router";
-
-export const groupRoutes = (pages: Pages): Route[] => {
-  const routes: Route[] = [];
-
-  Object.keys(pages).forEach((key) => {
-    const path = normalizePath(key);
-    const segments = path.split("/");
-    let currentPath = "";
-
-    segments.forEach((segment) => {
-      if (segment.startsWith("(") && segment.endsWith(")")) {
-        return;
-      }
-      currentPath += `/${segment}`;
-    });
-    if (!key.endsWith("layout.tsx") && pages[key].default) {
-      routes.push({
-        path: currentPath,
-        element: pages[key].default,
-        layout: segments[1],
-      });
-    }
-  });
-
-  return routes;
-};
-```
-
-</details>
-
-<details>
-<summary><code>Utils functions for router</code></summary>
-<br/>
-
-`Dir and file` ./src/utils/router/nestedRoutes.ts
-<br/>
-
-```typescript
-import { normalizePath } from "@src/utils/router";
-
-export const nestedRoutes = (
-  routes: Route[],
-  pages: Pages
-): GroupLayoutRoute => {
-  const nestedRoutes: GroupLayoutRoute = { children: [], element: null };
-
-  const addLayouts: GroupRoute[] = [];
-
-  Object.keys(pages).forEach((key) => {
-    const path = normalizePath(key);
-    const segments = path.split("/")[1];
-    if (key === `./pages/${segments}/layout.tsx`) {
-      addLayouts.push({
-        element: pages[`./pages/${segments}/layout.tsx`]?.default,
-        children: routes.filter((route) => {
-          return route.layout === segments;
-        }),
-      });
-    }
-    if (segments === "layout") {
-      nestedRoutes.element = pages[key].default;
-      nestedRoutes.children = addLayouts.length > 0 ? addLayouts : routes;
-    }
-  });
-
-  if (!nestedRoutes.children.length) {
-    nestedRoutes.children = routes;
-  }
-
-  return nestedRoutes;
-};
-```
-
-</details>
-
-<details>
-<summary><code>Utils functions for router</code></summary>
-<br/>
-
-`Dir and file` ./src/utils/router/index.ts.ts
-<br/>
-
-```typescript
-export * from "@src/utils/router/groupRoutes";
-export * from "@src/utils/router/nestedRoute";
-export * from "@src/utils/router/normalizePath";
-```
-
-</details>
-
-<details>
-<summary><code>Router hook</code></summary>
-<br/>
-
-`Dir and file` ./src/hooks/useRouter.tsx
-<br/>
-
-```typescript
-import { groupRoutes, nestedRoutes } from "@src/utils/router";
-
-export const useRouter = (pages: Pages): GroupLayoutRoute => {
-  const routes = groupRoutes(pages);
-  const nestedRoute = nestedRoutes(routes, pages);
-
-  return nestedRoute;
-};
-```
-
-</details>
-
-<details>
-<summary><code>hooks folder missing file</code></summary>
-<br/>
-
-`Dir and file` ./src/hooks/index.ts
-<br/>
-
-```typescript
-export * from "@src/hooks/useRouter";
-export * from "@src/hooks/useTheme";
-```
-
-</details>
-
-<details>
-<summary><code>Routes</code></summary>
-<br/>
-
-`Dir and file` ./src/router/router.ts
-<br/>
-
-```typescript
-import React from "react";
-import { createBrowserRouter, RouteObject } from "react-router-dom";
-import { NotFound } from "@src/components/pages/notFound/NotFound";
-
-export const router = (routes: GroupLayoutRoute) => {
-  const buildRoutes = (routes: GroupRoute[]): RouteObject[] => {
-    if (!routes) return [];
-
-    return routes.map((route: GroupRoute) => {
-      const { path, element, children } = route;
-
-      return {
-        path,
-        element: React.createElement(element),
-        children: children ? buildRoutes(children) : undefined,
-      };
-    });
-  };
-
-  const routesArray = routes ? buildRoutes(routes.children) : [];
-
-  const baseLayout: RouteObject[] = [
-    {
-      element: React.createElement(routes.element),
-      children: [
-        ...routesArray,
-        { path: "*", element: React.createElement(NotFound) },
-      ],
-    },
-  ];
-
-  return createBrowserRouter(baseLayout);
-};
-```
-
-</details>
-
-<details>
-<summary><code>Configure everything into App.tsx</code></summary>
-<br/>
-
-`Dir and file` ./src/App.tsx
-<br/>
-
-```typescript
-import { router } from '@src/router/router'
-import { RouterProvider } from 'react-router-dom'
-import { ThemeProvider } from '@src/contexts/themeContext'
-import { useRouter } from '@src/hooks'
-import { Loader } from '@src/components/ui/loader/Loader'
-import '@src/assets/styles/index.css'
-
-export const App = () => {
-  const pagesRaw = import.meta.glob('./pages/**/!(*.test.[jt]sx)*.([jt]sx)', {
-    eager: true,
-  })
-  const pages: Pages = Object.fromEntries(
-    Object.entries(pagesRaw).map(([key, module]) => [key, module as PageModule])
-  )
-  const routes = useRouter(pages)
-  const routerInstance = router(routes)
-
-  return (
-    <ThemeProvider>
-      <RouterProvider router={routerInstance} fallbackElement={<Loader />} />
-    </ThemeProvider>
-  )
-}
-```
-
-</details>
 
 **Running the Project**
 
