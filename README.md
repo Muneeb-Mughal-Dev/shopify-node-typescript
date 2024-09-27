@@ -31,6 +31,8 @@
 
 <p>This boilerplate is crafted for building robust Shopify apps using a modern tech stack that includes Node.js, React, TanStack Query, TypeScript, Knex, and Objective. It’s designed to streamline the development process, enabling developers to efficiently create feature-rich applications tailored for the Shopify ecosystem.
 
+This boilerplate is designed to empower developers to showcase their skills while creating impactful Shopify apps in a real-time environment.
+
 If you need assistance or encounter any issues, feel free to reach out via email.</p>
 
 <a href="mailto:muneebmughal342@gmail.com" target="_blank"><img src="https://img.shields.io/badge/-Contact-black?style=for-the-badge&logoColor=white&logo=gmail&color=f67373" alt="mail" /></a>
@@ -40,6 +42,8 @@ If you need assistance or encounter any issues, feel free to reach out via email
 This template combines a number of third party open-source tools:
 
 - [Express](https://expressjs.com/) builds the backend.
+- [Knex](https://expressjs.com/) SQL query builder.
+- [Objective js](https://expressjs.com/) For application structure.
 - [Vite](https://vitejs.dev/) builds the [React](https://reactjs.org/) frontend.
 - [React Router](https://reactrouter.com/) is used for routing. We wrap this with file-based routing.
 - [TanStack Query](https://tanstack.com/) queries the Admin API.
@@ -61,7 +65,21 @@ The following Shopify tools complement these third-party tools to ease app devel
 
 ## <a name="features">🔋 Features</a>
 
+## Backend
+
+👉 **Node.js**: Leverage the power of server-side JavaScript to handle backend processes seamlessly.
+
+👉 **TypeScript**: Enhance code quality and maintainability with static typing, catching errors during development.
+
+👉 **Knex**: Utilize a powerful SQL query builder for flexible database interactions, making data management straightforward.
+
+👉 **Objective**: Structure your application around best practices, ensuring a clean and scalable architecture.
+
+## Frontend
+
 👉 **Theme**: Custom theme with contexts to manage and switch between light and dark modes.
+
+👉 **TanStack Query**: Simplify data fetching and state management, allowing for efficient and intuitive API interactions.
 
 👉 **Routing**
 
