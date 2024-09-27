@@ -19,11 +19,11 @@
 
 ## <a name="table">📋 Table of Contents</a>
 
-1. 🤖 [Introduction](#introduction)
-2. ⚙️ [Tech Stack](#tech-stack)
-3. 🔋 [Features](#features)
-4. 🤸 [Quick Start](#quick-start)
-5. 🕸️ [Snippets (Code to Copy)](#snippets)
+1. <h3>🤖 [Introduction](#introduction)</h3>
+2. <h3>⚙️ [Tech Stack](#tech-stack)</h3>
+3. <h3>🔋 [Features](#features)</h3>
+4. <h3>🤸 [Quick Start](#quick-start)</h3>
+5. <h3>🕸️ [Snippets (Code to Copy)](#snippets)</h3>
 
 ## <a name="introduction">🤖 Introduction</a>
 
