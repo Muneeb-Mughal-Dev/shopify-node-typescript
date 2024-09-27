@@ -1,7 +1,7 @@
 <div align="center">
   <br />
   <h2>Shopify App Template for Node + Typescript + React</h2>
-  This is a template for building a [Shopify app](https://shopify.dev/docs/apps/getting-started) using Node and React. It contains the basics for building a Shopify app.
+  This is a template for building a <a href='https://shopify.dev/docs/apps/getting-started'>Shopify App</a> using Node, React, Typescript, Knex, and Objective. It contains the basics for building a Shopify app.
   <br />
 
   <div>
