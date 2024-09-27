@@ -1,31 +1,53 @@
-# Shopify App Template for Node
+<div align="center">
+ <h1>Shopify App Template for Node + Typescript + React</h1>
+  <p>This is a template for building a <a href='https://shopify.dev/docs/apps/getting-started'>Shopify App</a> using Node, React, TanStack Query, Typescript, Knex, and Objective. It contains the basics for building a Shopify app.</p>
+  <div>
+    <img src="https://img.shields.io/badge/-shopify-white?style=for-the-badge&logoColor=white&logo=shopify&color=7AB55C" alt="shopify" />
+    <img src="https://img.shields.io/badge/knex%20js-white?style=for-the-badge&logoColor=white&logo=knex.js&color=D26B38" alt="knex-js" />
+    <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178c6" alt="typescript" />
+    <img src="https://img.shields.io/badge/-PRETTIER-black?style=for-the-badge&logoColor=white&logo=prettier&color=f8bc45" alt="prettier" />
+    <br/>
+    <img src="https://img.shields.io/badge/-VITE-black?style=for-the-badge&logoColor=white&logo=vite&color=747bff" alt="vite" />
+    <img src="https://img.shields.io/badge/-REACT_JS-black?style=for-the-badge&logoColor=white&logo=react&color=58c4dc" alt="react.js" />
+    <img src="https://img.shields.io/badge/-REACT_ROUTER_DOM-black?style=for-the-badge&logoColor=white&logo=reactrouter&color=f44250" alt="react-router-dom" />
+    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
+  </div>
+<br/>
 
-This is a template for building a [Shopify app](https://shopify.dev/docs/apps/getting-started) using Node and React. It contains the basics for building a Shopify app.
+**Build Shopify app with this boilerplate. Join us!**
 
-Rather than cloning this repo, you can use your preferred package manager and the Shopify CLI with [these steps](#installing-the-template).
+<hr/>
+</div>
 
-## Benefits
+## <a name="table">📋 Table of Contents</a>
 
-Shopify apps are built on a variety of Shopify tools to create a great merchant experience. The [create an app](https://shopify.dev/docs/apps/getting-started/create) tutorial in our developer documentation will guide you through creating a Shopify app using this template.
+1. 🤖 [Introduction](#introduction)
+2. ⚙️ [Tech Stack](#tech-stack)
+3. 🔋 [Features](#features)
+4. 🤸 [Quick Start](#quick-start)
+5. 🕸️ [Snippets (Code to Copy)](#snippets)
+6. 📋 [Files (Code Download links)](#files)
 
-The Node app template comes with the following out-of-the-box functionality:
+## <a name="introduction">🤖 Introduction</a>
 
-- OAuth: Installing the app and granting permissions
-- GraphQL Admin API: Querying or mutating Shopify admin data
-- REST Admin API: Resource classes to interact with the API
-- Shopify-specific tooling:
-  - AppBridge
-  - Polaris
-  - Webhooks
+<p>This boilerplate is crafted for building robust Shopify apps using a modern tech stack that includes Node.js, React, TanStack Query, TypeScript, Knex, and Objective. It’s designed to streamline the development process, enabling developers to efficiently create feature-rich applications tailored for the Shopify ecosystem.
 
-## Tech Stack
+This boilerplate is designed to empower developers to showcase their skills while creating impactful Shopify apps in a real-time environment.
+
+If you need assistance or encounter any issues, feel free to reach out via email.</p>
+
+<a href="mailto:muneebmughal342@gmail.com" target="_blank"><img src="https://img.shields.io/badge/-Contact-black?style=for-the-badge&logoColor=white&logo=gmail&color=f67373" alt="mail" /></a>
+
+## <a name="tech-stack">⚙️ Tech Stack</a>
 
 This template combines a number of third party open-source tools:
 
 - [Express](https://expressjs.com/) builds the backend.
+- [Knex](https://expressjs.com/) SQL query builder.
+- [Objective js](https://expressjs.com/) For application structure.
 - [Vite](https://vitejs.dev/) builds the [React](https://reactjs.org/) frontend.
 - [React Router](https://reactrouter.com/) is used for routing. We wrap this with file-based routing.
-- [React Query](https://react-query.tanstack.com/) queries the Admin API.
+- [TanStack Query](https://tanstack.com/) queries the Admin API.
 - [`i18next`](https://www.i18next.com/) and related libraries are used to internationalize the frontend.
   - [`react-i18next`](https://react.i18next.com/) is used for React-specific i18n functionality.
   - [`i18next-resources-to-backend`](https://github.com/i18next/i18next-resources-to-backend) is used to dynamically load app translations.
@@ -42,202 +64,372 @@ The following Shopify tools complement these third-party tools to ease app devel
 - [File-based routing](https://github.com/Shopify/shopify-frontend-template-react/blob/main/Routes.jsx) makes creating new pages easier.
 - [`@shopify/i18next-shopify`](https://github.com/Shopify/i18next-shopify) is a plugin for [`i18next`](https://www.i18next.com/) that allows translation files to follow the same JSON schema used by Shopify [app extensions](https://shopify.dev/docs/apps/checkout/best-practices/localizing-ui-extensions#how-it-works) and [themes](https://shopify.dev/docs/themes/architecture/locales/storefront-locale-files#usage).
 
-## Getting started
+## <a name="features">🔋 Features</a>
 
-### Requirements
+## Backend
 
-1. You must [download and install Node.js](https://nodejs.org/en/download/) if you don't already have it.
-1. You must [create a Shopify partner account](https://partners.shopify.com/signup) if you don’t have one.
-1. You must create a store for testing if you don't have one, either a [development store](https://help.shopify.com/en/partners/dashboard/development-stores#create-a-development-store) or a [Shopify Plus sandbox store](https://help.shopify.com/en/partners/dashboard/managing-stores/plus-sandbox-store).
+- **Node.js**: Leverage the power of server-side JavaScript to handle backend processes seamlessly.
 
-### Installing the template
+- **Node.js**: Leverage the power of server-side JavaScript to handle backend processes seamlessly.
 
-This template can be installed using your preferred package manager:
+- **TypeScript**: Enhance code quality and maintainability with static typing, catching errors during development.
 
-Using yarn:
+- **Knex**: Utilize a powerful SQL query builder for flexible database interactions, making data management straightforward.
 
-```shell
+- **Objective**: Structure your application around best practices, ensuring a clean and scalable architecture.
+
+## Frontend
+
+- **Theme**: Custom theme with contexts to manage and switch between light and dark modes.
+
+- **TanStack Query**: Simplify data fetching and state management, allowing for efficient and intuitive API interactions.
+
+- **Routing**
+
+  - **File-based Routing**: Handles file-based routing.
+  - **Dynamic Routes**: Supports dynamic routing.
+  - **Layouts**: Manages multiple layouts.
+  - **404 Pages**: Configures custom 404 pages.
+
+- **Storage**: Includes an instance for managing local storage.
+
+- **Marquee**: Integrated marquee slider for scrolling text or images.
+
+- **Code Architecture**: Emphasizes modularity and reusability of code.
+
+## <a name="quick-start">🤸 Quick Start</a>
+
+Follow these steps to set up the project locally on your machine.
+
+**Prerequisites**: Make sure you have the following installed on your machine
+
+- [Shopify CLI](https://shopify.dev/docs/api/shopify-cli)
+
+- [Git](https://git-scm.com/)
+
+- [Node.js](https://nodejs.org/en) or [nvm](https://github.com/nvm-sh/nvm)
+
+- [yarn](https://classic.yarnpkg.com/lang/en/docs/install/) or [npm](https://www.npmjs.com/) (Node Package Manager)
+
+**Initalize the project using Shopify cli command**
+
+```bash
+
 yarn create @shopify/app --template=node
+
 ```
 
-Using npm:
+## **Installation for frontend**
 
-```shell
-npm init @shopify/app@latest -- --template=node
+Remove the old frontend and create the new react project:
+
+```bash
+
+cd web && rm -rd frontend && yarn create vite frontend --template react-ts cd frontend
+
 ```
 
-Using pnpm:
+Install the require dependencies:
 
-```shell
-pnpm create @shopify/app@latest --template=node
+```bash
+
+yarn add @formatjs/intl-locale @formatjs/intl-localematcher @formatjs/intl-pluralrules @shopify/app-bridge @shopify/app-bridge-react @shopify/i18next-shopify @shopify/polaris @tanstack/react-query @tanstack/react-query-devtools i18next i18next-resources-to-backend lucide-react react-i18next react-router-dom
+
 ```
 
-This will clone the template and install the required dependencies.
+Install the require dev dependencies:
 
-#### Local Development
+```bash
 
-[The Shopify CLI](https://shopify.dev/docs/apps/tools/cli) connects to an app in your Partners dashboard. It provides environment variables, runs commands in parallel, and updates application URLs for easier development.
+yarn add @eslint/js @shopify/stylelint-polaris @tailwindcss/typography @tanstack/eslint-plugin-query @trivago/prettier-plugin-sort-imports @types/eslint__js @types/node @types/react @types/react-dom @vitejs/plugin-react autoprefixer eslint eslint-plugin-react-hooks eslint-plugin-react-refresh globals history jsdom postcss prettier-plugin-tailwindcss stylelint tailwind-merge tailwindcss tailwindcss-animate typescript typescript-eslint vi-fetch tailwind-merge --dev
 
-You can develop locally using your preferred package manager. Run one of the following commands from the root of your app.
+```
 
-Using yarn:
+Initialize tailwindcss files using npx:
 
-```shell
+```bash
+npx tailwindcss init -p --ts
+```
+
+## **Installation for backend**
+
+Navigate to the web folder:
+
+```bash
+
+cd ../
+
+```
+
+Remove sqlite
+
+```bash
+
+yarn remove @shopify/shopify-app-session-storage-sqlite
+
+```
+
+Install the require dependencies:
+
+```bash
+
+yarn add @shopify/shopify-app-session-storage-mysql cors dotenv envalid joi knex mysql2 objection reflect-metadata serve-static swagger-jsdoc swagger-ui-express winston winston-daily-rotate-file
+
+```
+
+Install the require dev dependencies:
+
+```bash
+
+yarn add @trivago/prettier-plugin-sort-imports @types/compression @types/cors @types/express @types/node @types/nodemon @types/serve-static @types/swagger-jsdoc @types/swagger-ui-express @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier eslint-plugin-prettier nodemon prettier pretty-quick swagger-autogen ts-node tsc-alias tsconfig-paths typescript --dev
+
+```
+
+**Navigate to the root folder**
+
+```bash
+
+cd ../
+
+```
+
+## <a name="snippets">🕸️ Snippets</a>
+
+## Root Files
+
+<details>
+<summary><code>Update .gitignore file</code></summary>
+
+<br/>
+
+```json
+
+# Environment Configuration
+.env
+.env.*
+
+# dependencies
+node_modules
+.pnp
+.pnp.js
+dist
+
+# Test coverage directory
+coverage
+
+# Ignore Apple macOS Desktop Services Store
+.DS_Store
+
+# debug
+logs
+*.log
+yarn.lock
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+lerna-debug.log*
+
+# ngrok tunnel file
+config/tunnel.pid
+
+# build output
+dist
+build
+
+# extensions build output
+extensions/*/build
+
+# Node library SQLite database
+web/database.sqlite
+
+# configs toml
+fly.toml
+
+# shopify.app.toml
+shopify.app.develop.toml
+
+# Json
+package-lock.json
+!.vscode/extensions.json
+
+# Ignore shopify files created during app dev
+.shopify/*
+.shopify.lock
+
+```
+
+</details>
+
+<details>
+<summary><code>Add import alices into the package.json file</code></summary>
+
+<br/>
+
+```json
+
+"scripts": {
+    "shopify": "shopify",
+    "dev": "shopify app dev",
+    "info": "shopify app info",
+    "build": "shopify app build",
+    "deploy": "shopify app deploy",
+    "generate": "shopify app generate",
+    "extension": "shopify app generate extension",
+    "prettify": "cd web && npx prettier --write ./ && [ -d frontend ] && cd frontend && npx prettier --write ./",
+    "docs:generate": "cd web && node --no-warnings --loader ts-node/esm ./server/configs/swagger.ts",
+    "db:seed": "cd web && node --no-warnings --loader ts-node/esm node_modules/knex/bin/cli.js seed:run --knexfile=knexfile.ts --verbose",
+    "migration:run": "cd web && node --no-warnings --loader ts-node/esm node_modules/knex/bin/cli.js migrate:latest --knexfile=knexfile.ts --verbose",
+    "migration:fresh": "cd web && node --no-warnings --loader ts-node/esm node_modules/knex/bin/cli.js migrate:rollback --knexfile=knexfile.ts --verbose",
+    "migration:refresh": "cd web && node --no-warnings --loader ts-node/esm node_modules/knex/bin/cli.js migrate:rollback --knexfile=knexfile.ts --verbose && node --no-warnings --loader ts-node/esm node_modules/knex/bin/cli.js migrate:latest --knexfile=knexfile.ts --verbose",
+    "make:seeder": "cd web && node --no-warnings --loader ts-node/esm node_modules/knex/bin/cli.js seed:make --knexfile=knexfile.ts -x ts --env development",
+    "make:migration": "cd web && node --no-warnings --loader ts-node/esm node_modules/knex/bin/cli.js migrate:make --knexfile=knexfile.ts -x ts --env development"
+  },
+
+```
+
+</details>
+
+## Web dir
+
+**Navigate to the web folder**
+
+```bash
+
+cd web
+
+```
+
+Intigrate Typescript
+
+```bash
+
+npx -p typescript tsc --init
+
+```
+
+Intigrate Knex
+
+```bash
+
+yarn add knex -g
+
+```
+
+Remove these files
+
+```bash
+
+rm -rf indec.js product-create.js shopify.js gdpr.js privacy.js
+
+```
+
+<details>
+<summary><code>Update .tsconfig.json file</code></summary>
+
+<br/>
+
+```json
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["ES2020", "esnext.asynciterable"],
+    "typeRoots": ["node_modules/@types"],
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "module": "ESNext",
+    "pretty": true,
+    "sourceMap": true,
+    "declaration": true,
+    "outDir": "./dist",
+    "allowJs": true,
+    "noEmit": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "rootDir": "./",
+    "baseUrl": "./server",
+    "paths": {
+      "#server/*": ["*"],
+      "#shopify/*": ["shopify/*"],
+      "#configs/*": ["configs/*"],
+      "#utils/*": ["utils/*"],
+      "#routes/*": ["routes/*"],
+      "#schema/*": ["schema/*"],
+      "#database/*": ["database/*"],
+      "#services/*": ["services/*"],
+      "#enum/*": ["enum/*"],
+      "#models/*": ["models/*"],
+      "#exceptions/*": ["exceptions/*"],
+      "#interfaces/*": ["interfaces/*"],
+      "#controllers/*": ["controllers/*"],
+      "#mutations/*": ["mutations/*"],
+      "#middlewares/*": ["middlewares/*"],
+      "#docs/*": ["docs/*"]
+    }
+  },
+  "types": ["node"],
+  "include": [
+    "server/**/*.ts",
+    "server/**/*.json",
+    "*.json",
+    "server/**.json",
+    "*.yml",
+    "server/**.yml",
+    "*.yaml",
+    "server/**.yaml",
+    ".env"
+  ],
+  "exclude": ["node_modules", "dist"]
+}
+```
+
+</details>
+
+<details>
+<summary><code>Add import alices into the package.json file</code></summary>
+
+<br/>
+
+```json
+
+"imports": {
+        "#server/*": "./server/*.js",
+        "#shopify/*": "./server/shopify/*.js",
+        "#utils/*": "./server/utils/*.js",
+        "#configs/*": "./server/configs/*.js",
+        "#docs/*": "./server/docs/*",
+        "#routes/*": "./server/routes/*.js",
+        "#schema/*": "./server/schema/*.js",
+        "#database/*": "./server/database/*.js",
+        "#enum/*": "./server/enum/*.js",
+        "#services/*": "./server/services/*.js",
+        "#models/*": "./server/models/*.js",
+        "#exceptions/*": "./server/exceptions/*.js",
+        "#interfaces/*": "./server/interfaces/*.js",
+        "#controllers/*": "./server/controllers/*.js",
+        "#middlewares/*": "./server/middlewares/*.js",
+        "#mutations/*": "./server/mutations/*.js"
+    },
+
+```
+
+</details>
+
+## <a name="files">📋 Necessary files</a>
+
+- Backend code need to be placed in the `web/` directory [Click here](https://drive.google.com/file/d/1xADuTezXj_WEnuyy637ZHvntvN_V6292/view?usp=sharing)
+
+- Frontend code needs to be placed in the `web/frontend/` directory [Click here](https://drive.google.com/file/d/1cnZVm2Cwlzbi_4PLfGHpbT7i1iHvCAgr/view?usp=sharing)
+
+**Running the Project**
+
+```bash
+
 yarn dev
+
 ```
-
-Using npm:
-
-```shell
-npm run dev
-```
-
-Using pnpm:
-
-```shell
-pnpm run dev
-```
-
-Open the URL generated in your console. Once you grant permission to the app, you can start development.
-
-## Deployment
-
-### Application Storage
-
-This template uses [SQLite](https://www.sqlite.org/index.html) to store session data. The database is a file called `database.sqlite` which is automatically created in the root. This use of SQLite works in production if your app runs as a single instance.
-
-The database that works best for you depends on the data your app needs and how it is queried. You can run your database of choice on a server yourself or host it with a SaaS company. Here’s a short list of databases providers that provide a free tier to get started:
-
-| Database   | Type             | Hosters                                                                                                                                                                                                                               |
-| ---------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| MySQL      | SQL              | [Digital Ocean](https://www.digitalocean.com/try/managed-databases-mysql), [Planet Scale](https://planetscale.com/), [Amazon Aurora](https://aws.amazon.com/rds/aurora/), [Google Cloud SQL](https://cloud.google.com/sql/docs/mysql) |
-| PostgreSQL | SQL              | [Digital Ocean](https://www.digitalocean.com/try/managed-databases-postgresql), [Amazon Aurora](https://aws.amazon.com/rds/aurora/), [Google Cloud SQL](https://cloud.google.com/sql/docs/postgres)                                   |
-| Redis      | Key-value        | [Digital Ocean](https://www.digitalocean.com/try/managed-databases-redis), [Amazon MemoryDB](https://aws.amazon.com/memorydb/)                                                                                                        |
-| MongoDB    | NoSQL / Document | [Digital Ocean](https://www.digitalocean.com/try/managed-databases-mongodb), [MongoDB Atlas](https://www.mongodb.com/atlas/database)                                                                                                  |
-
-To use one of these, you need to change your session storage configuration. To help, here’s a list of [SessionStorage adapter packages](https://github.com/Shopify/shopify-api-js/blob/main/packages/shopify-api/docs/guides/session-storage.md).
-
-### Build
-
-The frontend is a single page app. It requires the `SHOPIFY_API_KEY`, which you can find on the page for your app in your partners dashboard. Paste your app’s key in the command for the package manager of your choice:
-
-Using yarn:
-
-```shell
-cd web/frontend/ && SHOPIFY_API_KEY=REPLACE_ME yarn build
-```
-
-Using npm:
-
-```shell
-cd web/frontend/ && SHOPIFY_API_KEY=REPLACE_ME npm run build
-```
-
-Using pnpm:
-
-```shell
-cd web/frontend/ && SHOPIFY_API_KEY=REPLACE_ME pnpm run build
-```
-
-You do not need to build the backend.
-
-## Hosting
-
-When you're ready to set up your app in production, you can follow [our deployment documentation](https://shopify.dev/docs/apps/deployment/web) to host your app on a cloud provider like [Heroku](https://www.heroku.com/) or [Fly.io](https://fly.io/).
-
-When you reach the step for [setting up environment variables](https://shopify.dev/docs/apps/deployment/web#set-env-vars), you also need to set the variable `NODE_ENV=production`.
-
-## Known issues
-
-### Hot module replacement and Firefox
-
-When running the app with the CLI in development mode on Firefox, you might see your app constantly reloading when you access it.
-That happened in previous versions of the CLI, because of the way HMR websocket requests work.
-
-We fixed this issue with v3.4.0 of the CLI, so after updating it, you can make the following changes to your app's `web/frontend/vite.config.js` file:
-
-1. Change the definition `hmrConfig` object to be:
-
-   ```js
-   const host = process.env.HOST
-     ? process.env.HOST.replace(/https?:\/\//, "")
-     : "localhost";
-
-   let hmrConfig;
-   if (host === "localhost") {
-     hmrConfig = {
-       protocol: "ws",
-       host: "localhost",
-       port: 64999,
-       clientPort: 64999,
-     };
-   } else {
-     hmrConfig = {
-       protocol: "wss",
-       host: host,
-       port: process.env.FRONTEND_PORT,
-       clientPort: 443,
-     };
-   }
-   ```
-
-1. Change the `server.host` setting in the configs to `"localhost"`:
-
-   ```js
-   server: {
-     host: "localhost",
-     ...
-   ```
-
-### I can't get past the ngrok "Visit site" page
-
-When you’re previewing your app or extension, you might see an ngrok interstitial page with a warning:
-
-```text
-You are about to visit <id>.ngrok.io: Visit Site
-```
-
-If you click the `Visit Site` button, but continue to see this page, then you should run dev using an alternate tunnel URL that you run using tunneling software.
-We've validated that [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/run-tunnel/trycloudflare/) works with this template.
-
-To do that, you can [install the `cloudflared` CLI tool](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/), and run:
-
-```shell
-# Note that you can also use a different port
-cloudflared tunnel --url http://localhost:3000
-```
-
-Out of the logs produced by cloudflare you will notice a https URL where the domain ends with `trycloudflare.com`. This is your tunnel URL. You need to copy this URL as you will need it in the next step.
-
-```shell
-2022-11-11T19:57:55Z INF Requesting new quick Tunnel on trycloudflare.com...
-2022-11-11T19:57:58Z INF +--------------------------------------------------------------------------------------------+
-2022-11-11T19:57:58Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
-2022-11-11T19:57:58Z INF |  https://randomly-generated-hostname.trycloudflare.com                                     |
-2022-11-11T19:57:58Z INF +--------------------------------------------------------------------------------------------+
-```
-
-Below you would replace `randomly-generated-hostname` with what you have copied from the terminal. In a different terminal window, navigate to your app's root and with the URL from above you would call:
-
-```shell
-# Using yarn
-yarn dev --tunnel-url https://randomly-generated-hostname.trycloudflare.com:3000
-# or using npm
-npm run dev --tunnel-url https://randomly-generated-hostname.trycloudflare.com:3000
-# or using pnpm
-pnpm dev --tunnel-url https://randomly-generated-hostname.trycloudflare.com:3000
-```
-
-## Developer resources
-
-- [Introduction to Shopify apps](https://shopify.dev/docs/apps/getting-started)
-- [App authentication](https://shopify.dev/docs/apps/auth)
-- [Shopify CLI](https://shopify.dev/docs/apps/tools/cli)
-- [Shopify API Library documentation](https://github.com/Shopify/shopify-api-js#readme)
-- [Getting started with internationalizing your app](https://shopify.dev/docs/apps/best-practices/internationalization/getting-started)
-  - [i18next](https://www.i18next.com/)
-    - [Configuration options](https://www.i18next.com/overview/configuration-options)
-  - [react-i18next](https://react.i18next.com/)
-    - [`useTranslation` hook](https://react.i18next.com/latest/usetranslation-hook)
-    - [`Trans` component usage with components array](https://react.i18next.com/latest/trans-component#alternative-usage-components-array)
-  - [i18n-ally VS Code extension](https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally)
