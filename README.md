@@ -118,24 +118,30 @@ yarn create @shopify/app --template=node
 
 ```
 
-**Installation**
-
-Install the project dependencies using npm:
+Remove the old frontend and create the new react project:
 
 ```bash
-npm install
+
+cd web && rm -rd frontend && yarn create vite frontend --template react-ts cd frontend
+
 ```
 
-Install the require dependencies using npm:
+## **Installation for frontend**
+
+Install the require dependencies:
 
 ```bash
-npm install react-router-dom lucide-react
+
+yarn add @formatjs/intl-locale @formatjs/intl-localematcher @formatjs/intl-pluralrules @shopify/app-bridge @shopify/app-bridge-react @shopify/i18next-shopify @shopify/polaris @tanstack/react-query @tanstack/react-query-devtools i18next i18next-resources-to-backend lucide-react react-i18next react-router-dom
+
 ```
 
-Install the require dev dependencies using npm:
+Install the require dev dependencies:
 
 ```bash
-npm install -D @trivago/prettier-plugin-sort-imports @types/node prettier prettier-plugin-tailwindcss tailwind-merge tailwindcss tailwindcss-animate @tailwindcss/typography postcss autoprefixer
+
+yarn add @eslint/js @shopify/stylelint-polaris @tailwindcss/typography @tanstack/eslint-plugin-query @trivago/prettier-plugin-sort-imports @types/eslint__js @types/node @types/react @types/react-dom @vitejs/plugin-react autoprefixer eslint eslint-plugin-react-hooks eslint-plugin-react-refresh globals history jsdom postcss prettier-plugin-tailwindcss stylelint tailwind-merge tailwindcss tailwindcss-animate typescript typescript-eslint vi-fetch tailwind-merge --dev
+
 ```
 
 Initialize tailwindcss files using npx:
