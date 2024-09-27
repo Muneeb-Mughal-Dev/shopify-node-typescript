@@ -326,8 +326,8 @@ rm -rf indec.js product-create.js shopify.js gdpr.js privacy.js
 
 ## <a name="files">📋 Necessary files</a>
 
-- Backend code need to be placed in the web/ dir <a href="https://google.com" target="_blank">Click Here</a>
-- Frontend code need to be placed in the web/frontend/ dir <a href="https://google.com" target="_blank">Click Here</a>
+- [Backend code need to be placed in the web/ dir] <a href="https://google.com" target="_blank">Click Here</a>
+- [Frontend code need to be placed in the web/frontend/ dir](https://google.com){:target="\_blank"}
 
 **Running the Project**
 
