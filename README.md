@@ -263,6 +263,8 @@ package-lock.json
 <details>
 <summary><code>vite.config.ts</code></summary>
 
+## Web dir
+
 <br/>
 
 ```typescript
