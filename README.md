@@ -100,13 +100,15 @@ The following Shopify tools complement these third-party tools to ease app devel
 
 Follow these steps to set up the project locally on your machine.
 
-**Prerequisites**
+**Prerequisites**: Make sure you have the following installed on your machine
 
-Make sure you have the following installed on your machine:
+-- [Shopify CLI](https://shopify.dev/docs/api/shopify-cli)
 
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
+-- [Git](https://git-scm.com/)
+
+-- [Node.js](https://nodejs.org/en) or [nvm](https://github.com/nvm-sh/nvm)
+
+-- [yarn](https://classic.yarnpkg.com/lang/en/docs/install/) or [npm](https://www.npmjs.com/) (Node Package Manager)
 
 **Initalize the project using Vite + Typescript**
 
