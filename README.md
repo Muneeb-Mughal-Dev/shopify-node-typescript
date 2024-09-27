@@ -292,6 +292,102 @@ knex init -x ts
 
 ```
 
+<details>
+<summary><code>Update .tsconfig.json file</code></summary>
+
+<br/>
+
+```json
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["ES2020", "esnext.asynciterable"],
+    "typeRoots": ["node_modules/@types"],
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "module": "ESNext",
+    "pretty": true,
+    "sourceMap": true,
+    "declaration": true,
+    "outDir": "./dist",
+    "allowJs": true,
+    "noEmit": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "rootDir": "./",
+    "baseUrl": "./server",
+    "paths": {
+      "#server/*": ["*"],
+      "#shopify/*": ["shopify/*"],
+      "#configs/*": ["configs/*"],
+      "#utils/*": ["utils/*"],
+      "#routes/*": ["routes/*"],
+      "#schema/*": ["schema/*"],
+      "#database/*": ["database/*"],
+      "#services/*": ["services/*"],
+      "#enum/*": ["enum/*"],
+      "#models/*": ["models/*"],
+      "#exceptions/*": ["exceptions/*"],
+      "#interfaces/*": ["interfaces/*"],
+      "#controllers/*": ["controllers/*"],
+      "#mutations/*": ["mutations/*"],
+      "#middlewares/*": ["middlewares/*"],
+      "#docs/*": ["docs/*"]
+    }
+  },
+  "types": ["node"],
+  "include": [
+    "server/**/*.ts",
+    "server/**/*.json",
+    "*.json",
+    "server/**.json",
+    "*.yml",
+    "server/**.yml",
+    "*.yaml",
+    "server/**.yaml",
+    ".env"
+  ],
+  "exclude": ["node_modules", "dist"]
+}
+```
+
+</details>
+
+<details>
+<summary><code>Add import alices into the package.json file</code></summary>
+
+<br/>
+
+```json
+
+"imports": {
+        "#server/*": "./server/*.js",
+        "#shopify/*": "./server/shopify/*.js",
+        "#utils/*": "./server/utils/*.js",
+        "#configs/*": "./server/configs/*.js",
+        "#docs/*": "./server/docs/*",
+        "#routes/*": "./server/routes/*.js",
+        "#schema/*": "./server/schema/*.js",
+        "#database/*": "./server/database/*.js",
+        "#enum/*": "./server/enum/*.js",
+        "#services/*": "./server/services/*.js",
+        "#models/*": "./server/models/*.js",
+        "#exceptions/*": "./server/exceptions/*.js",
+        "#interfaces/*": "./server/interfaces/*.js",
+        "#controllers/*": "./server/controllers/*.js",
+        "#middlewares/*": "./server/middlewares/*.js",
+        "#mutations/*": "./server/mutations/*.js"
+    },
+
+```
+
+</details>
+
 ## Routing Configrations
 
 <details>
