@@ -102,13 +102,13 @@ Follow these steps to set up the project locally on your machine.
 
 **Prerequisites**: Make sure you have the following installed on your machine
 
--- [Shopify CLI](https://shopify.dev/docs/api/shopify-cli)
+- [Shopify CLI](https://shopify.dev/docs/api/shopify-cli)
 
--- [Git](https://git-scm.com/)
+- [Git](https://git-scm.com/)
 
--- [Node.js](https://nodejs.org/en) or [nvm](https://github.com/nvm-sh/nvm)
+- [Node.js](https://nodejs.org/en) or [nvm](https://github.com/nvm-sh/nvm)
 
--- [yarn](https://classic.yarnpkg.com/lang/en/docs/install/) or [npm](https://www.npmjs.com/) (Node Package Manager)
+- [yarn](https://classic.yarnpkg.com/lang/en/docs/install/) or [npm](https://www.npmjs.com/) (Node Package Manager)
 
 **Initalize the project using Vite + Typescript**
 
