@@ -270,6 +270,28 @@ cd web
 
 ```
 
+Intigrate Typescript
+
+```bash
+
+npx -p typescript tsc --init
+
+```
+
+Intigrate Knex
+
+```bash
+
+yarn add knex -g
+
+```
+
+```bash
+
+knex init -x ts
+
+```
+
 ## Routing Configrations
 
 <details>
