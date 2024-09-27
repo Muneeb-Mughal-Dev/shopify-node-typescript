@@ -260,6 +260,16 @@ package-lock.json
 
 </details>
 
+## Web dir
+
+**Navigate to the web folder**
+
+```bash
+
+cd web
+
+```
+
 ## Routing Configrations
 
 <details>
