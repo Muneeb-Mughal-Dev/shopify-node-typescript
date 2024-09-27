@@ -184,13 +184,13 @@ yarn add @trivago/prettier-plugin-sort-imports @types/compression @types/cors @t
 
 ```
 
-**Running the Project**
+**Navigate to the root folder**
 
 ```bash
-npm run dev
-```
 
-Open [http://localhost:3000](http://localhost:5173) in your browser to view the project.
+cd ../
+
+```
 
 ## <a name="snippets">🕸️ Snippets</a>
 
@@ -1202,3 +1202,11 @@ export * from "@src/utils/storage/variables";
 ```
 
 </details>
+
+**Running the Project**
+
+```bash
+
+yarn dev
+
+```
