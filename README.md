@@ -42,7 +42,7 @@ This template combines a number of third party open-source tools:
 - [Express](https://expressjs.com/) builds the backend.
 - [Vite](https://vitejs.dev/) builds the [React](https://reactjs.org/) frontend.
 - [React Router](https://reactrouter.com/) is used for routing. We wrap this with file-based routing.
-- [React Query](https://react-query.tanstack.com/) queries the Admin API.
+- [TanStack Query](https://tanstack.com/) queries the Admin API.
 - [`i18next`](https://www.i18next.com/) and related libraries are used to internationalize the frontend.
   - [`react-i18next`](https://react.i18next.com/) is used for React-specific i18n functionality.
   - [`i18next-resources-to-backend`](https://github.com/i18next/i18next-resources-to-backend) is used to dynamically load app translations.
