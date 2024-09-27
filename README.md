@@ -1,11 +1,11 @@
 <div align="center">
   <br />
-# Shopify App Template for Node + Typescript + React
-  <h2>This is a template for building a [Shopify app](https://shopify.dev/docs/apps/getting-started) using Node and React. It contains the basics for building a Shopify app.</h2>
+  <h2>Shopify App Template for Node + Typescript + React</h2>
+  This is a template for building a [Shopify app](https://shopify.dev/docs/apps/getting-started) using Node and React. It contains the basics for building a Shopify app.
   <br />
 
   <div>
-    <img src="https://img.shields.io/badge/-shopify?style=for-the-badge&logoColor=white&logo=shopify&color=7AB55C" alt="shopify" />
+    <img src="https://img.shields.io/badge/-shopify-white?style=for-the-badge&logoColor=white&logo=shopify&color=7AB55C" alt="shopify" />
     <img src="https://img.shields.io/badge/-VITE-black?style=for-the-badge&logoColor=white&logo=vite&color=747bff" alt="vite" />
     <img src="https://img.shields.io/badge/-REACT_JS-black?style=for-the-badge&logoColor=white&logo=react&color=58c4dc" alt="react.js" />
     <img src="https://img.shields.io/badge/-REACT_ROUTER_DOM-black?style=for-the-badge&logoColor=white&logo=reactrouter&color=f44250" alt="react-router-dom" />
