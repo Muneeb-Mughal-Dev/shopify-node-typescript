@@ -19,15 +19,15 @@
 
 ## <a name="table">📋 Table of Contents</a>
 
-1. <h3>🤖 [Introduction](#introduction)</h3>
-2. <h3>⚙️ [Tech Stack](#tech-stack)</h3>
-3. <h3>🔋 [Features](#features)</h3>
-4. <h3>🤸 [Quick Start](#quick-start)</h3>
-5. <h3>🕸️ [Snippets (Code to Copy)](#snippets)</h3>
+1. 🤖 [Introduction](#introduction)
+2. ⚙️ [Tech Stack](#tech-stack)
+3. 🔋 [Features](#features)
+4. 🤸 [Quick Start](#quick-start)
+5. 🕸️ [Snippets (Code to Copy)](#snippets)
 
 ## <a name="introduction">🤖 Introduction</a>
 
-Built with Vite and React to handle the user interface and styled with TailwindCSS, this boilerplate is designed for React frontend projects. The primary goal is to showcase a developer’s skills in a real-time environment and create a lasting impact.
+This boilerplate is crafted for building robust Shopify apps using a modern tech stack that includes Node.js, React, TanStack Query, TypeScript, Knex, and Objective. It’s designed to streamline the development process, enabling developers to efficiently create feature-rich applications tailored for the Shopify ecosystem.
 
 If you need assistance or encounter any issues, feel free to reach out via email.
 
