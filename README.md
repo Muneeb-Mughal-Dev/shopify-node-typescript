@@ -67,32 +67,34 @@ The following Shopify tools complement these third-party tools to ease app devel
 
 ## Backend
 
-👉 **Node.js**: Leverage the power of server-side JavaScript to handle backend processes seamlessly.
+- **Node.js**: Leverage the power of server-side JavaScript to handle backend processes seamlessly.
 
-👉 **TypeScript**: Enhance code quality and maintainability with static typing, catching errors during development.
+- **Node.js**: Leverage the power of server-side JavaScript to handle backend processes seamlessly.
 
-👉 **Knex**: Utilize a powerful SQL query builder for flexible database interactions, making data management straightforward.
+- **TypeScript**: Enhance code quality and maintainability with static typing, catching errors during development.
 
-👉 **Objective**: Structure your application around best practices, ensuring a clean and scalable architecture.
+- **Knex**: Utilize a powerful SQL query builder for flexible database interactions, making data management straightforward.
+
+- **Objective**: Structure your application around best practices, ensuring a clean and scalable architecture.
 
 ## Frontend
 
-👉 **Theme**: Custom theme with contexts to manage and switch between light and dark modes.
+- **Theme**: Custom theme with contexts to manage and switch between light and dark modes.
 
-👉 **TanStack Query**: Simplify data fetching and state management, allowing for efficient and intuitive API interactions.
+- **TanStack Query**: Simplify data fetching and state management, allowing for efficient and intuitive API interactions.
 
-👉 **Routing**
+- **Routing**
 
-- **File-based Routing**: Handles file-based routing.
-- **Dynamic Routes**: Supports dynamic routing.
-- **Layouts**: Manages multiple layouts.
-- **404 Pages**: Configures custom 404 pages.
+  - **File-based Routing**: Handles file-based routing.
+  - **Dynamic Routes**: Supports dynamic routing.
+  - **Layouts**: Manages multiple layouts.
+  - **404 Pages**: Configures custom 404 pages.
 
-👉 **Storage**: Includes an instance for managing local storage.
+- **Storage**: Includes an instance for managing local storage.
 
-👉 **Marquee**: Integrated marquee slider for scrolling text or images.
+- **Marquee**: Integrated marquee slider for scrolling text or images.
 
-👉 **Code Architecture**: Emphasizes modularity and reusability of code.
+- **Code Architecture**: Emphasizes modularity and reusability of code.
 
 ## <a name="quick-start">🤸 Quick Start</a>
 
