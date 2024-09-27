@@ -1,14 +1,6 @@
 <div align="center">
-  <br />
-
-  <h2>Shopify App Template for Node + Typescript + React</h2>
-
-  <p>
-  This is a template for building a <a href='https://shopify.dev/docs/apps/getting-started'>Shopify App</a> using Node, React, Typescript, Knex, and Objective. It contains the basics for building a Shopify app.
-  </p>
-
-  <br />
-
+ <h1>Shopify App Template for Node + Typescript + React</h1>
+  <p>This is a template for building a <a href='https://shopify.dev/docs/apps/getting-started'>Shopify App</a> using Node, React, TanStack Query, Typescript, Knex, and Objective. It contains the basics for building a Shopify app.</p>
   <div>
     <img src="https://img.shields.io/badge/-shopify-white?style=for-the-badge&logoColor=white&logo=shopify&color=7AB55C" alt="shopify" />
     <img src="https://img.shields.io/badge/knex%20js-white?style=for-the-badge&logoColor=white&logo=knex.js&color=D26B38" alt="knex-js" />
@@ -20,15 +12,12 @@
     <img src="https://img.shields.io/badge/-REACT_ROUTER_DOM-black?style=for-the-badge&logoColor=white&logo=reactrouter&color=f44250" alt="react-router-dom" />
     <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
   </div>
-
-  <h3 align="center">A Collaborative LiveDocs</h3>
-
-  <div align="center">
-    Build React projects with this awesome boilerplate. Join the JSM family!
-  </div>
+<br/>
+**Build Shopify app with this boilerplate. Join us!**
+<hr/>
 </div>
 
-## 📋 <a name="table">Table of Contents</a>
+## <a name="table">📋 Table of Contents</a>
 
 1. 🤖 [Introduction](#introduction)
 2. ⚙️ [Tech Stack](#tech-stack)
