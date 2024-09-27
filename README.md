@@ -13,7 +13,9 @@
     <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
   </div>
 <br/>
+
 **Build Shopify app with this boilerplate. Join us!**
+
 <hr/>
 </div>
 
@@ -27,9 +29,9 @@
 
 ## <a name="introduction">🤖 Introduction</a>
 
-This boilerplate is crafted for building robust Shopify apps using a modern tech stack that includes Node.js, React, TanStack Query, TypeScript, Knex, and Objective. It’s designed to streamline the development process, enabling developers to efficiently create feature-rich applications tailored for the Shopify ecosystem.
+<p>This boilerplate is crafted for building robust Shopify apps using a modern tech stack that includes Node.js, React, TanStack Query, TypeScript, Knex, and Objective. It’s designed to streamline the development process, enabling developers to efficiently create feature-rich applications tailored for the Shopify ecosystem.
 
-If you need assistance or encounter any issues, feel free to reach out via email.
+If you need assistance or encounter any issues, feel free to reach out via email.</p>
 
 <a href="mailto:muneebmughal342@gmail.com" target="_blank"><img src="https://img.shields.io/badge/-Contact-black?style=for-the-badge&logoColor=white&logo=gmail&color=f67373" alt="mail" /></a>
 
