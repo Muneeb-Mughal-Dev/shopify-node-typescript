@@ -1,0 +1,31 @@
+{
+  "name": "v2",
+  "version": "1.0.0",
+  "main": "web/index.js",
+  "license": "UNLICENSED",
+  "scripts": {
+    "shopify": "shopify",
+    "dev": "shopify app dev",
+    "info": "shopify app info",
+    "build": "shopify app build",
+    "deploy": "shopify app deploy",
+    "generate": "shopify app generate",
+    "extension": "shopify app generate extension",
+    "prettify": "cd web && npx prettier --write ./ && [ -d frontend ] && cd frontend && npx prettier --write ./",
+    "docs:generate": "cd web && node --no-warnings --loader ts-node/esm ./server/configs/swagger.ts",
+    "db:seed": "cd web && node --no-warnings --loader ts-node/esm node_modules/knex/bin/cli.js seed:run --knexfile=knexfile.ts --verbose",
+    "migration:run": "cd web && node --no-warnings --loader ts-node/esm node_modules/knex/bin/cli.js migrate:latest --knexfile=knexfile.ts --verbose",
+    "migration:fresh": "cd web && node --no-warnings --loader ts-node/esm node_modules/knex/bin/cli.js migrate:rollback --knexfile=knexfile.ts --verbose",
+    "migration:refresh": "cd web && node --no-warnings --loader ts-node/esm node_modules/knex/bin/cli.js migrate:rollback --knexfile=knexfile.ts --verbose && node --no-warnings --loader ts-node/esm node_modules/knex/bin/cli.js migrate:latest --knexfile=knexfile.ts --verbose",
+    "make:seeder": "cd web && node --no-warnings --loader ts-node/esm node_modules/knex/bin/cli.js seed:make --knexfile=knexfile.ts -x ts --env development",
+    "make:migration": "cd web && node --no-warnings --loader ts-node/esm node_modules/knex/bin/cli.js migrate:make --knexfile=knexfile.ts -x ts --env development"
+  },
+  "dependencies": {},
+  "author": "dev",
+  "private": true,
+  "workspaces": [
+    "extensions/*",
+    "web/",
+    "web/frontend"
+  ]
+}
