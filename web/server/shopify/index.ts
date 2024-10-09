@@ -10,8 +10,8 @@ const shopify: ShopifyAppInterface = shopifyApp({
         apiKey: Env.SHOPIFY_API_KEY,
         apiSecretKey: Env.SHOPIFY_API_SECRET || '',
         scopes: Env.SCOPES,
-        // hostScheme: "https",
-        // hostName: `localhost:${PORT}`,
+        hostScheme: 'https',
+        hostName: `your-domain:${Env.PORT}`,
         apiVersion: LATEST_API_VERSION,
         restResources,
         future: {

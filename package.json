@@ -8,6 +8,7 @@
     "shopify": "shopify",
     "info": "shopify app info",
     "vite:build": "vite build",
+    "backend:build": "swc web -d dist --source-maps --copy-files",
     "shopify:dev": "shopify app dev",
     "generate": "shopify app generate",
     "shopify:build": "shopify app build",
