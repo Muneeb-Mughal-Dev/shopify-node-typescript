@@ -6,9 +6,9 @@
   "scripts": {
     "vite:dev": "vite",
     "shopify": "shopify",
+    "app:deploy": "node deploy.cjs",
     "info": "shopify app info",
     "vite:build": "vite build",
-    "backend:build": "swc web -d dist --source-maps --copy-files",
     "shopify:dev": "shopify app dev",
     "generate": "shopify app generate",
     "shopify:build": "shopify app build",
@@ -16,6 +16,7 @@
     "build": "run-s vite:build shopify:build",
     "extension": "shopify app generate extension",
     "deploy": "run-s vite:build cleanup shopify:deploy",
+    "backend:build": "swc web -d dist --source-maps --copy-files",
     "docs:generate": "cd web && node --no-warnings --loader ts-node/esm ./server/configs/swagger.ts",
     "prettify": "cd web && npx prettier --write ./ && [ -d frontend ] && cd frontend && npx prettier --write ./",
     "db:seed": "cd web && node --no-warnings --loader ts-node/esm node_modules/knex/bin/cli.js seed:run --knexfile=knexfile.ts --verbose",

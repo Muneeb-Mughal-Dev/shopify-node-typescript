@@ -10,6 +10,7 @@ export const Env = Object.freeze({
     DB_NAME: process.env.DB_NAME,
     LOG_DIR: process.env.LOG_DIR,
     APP_POTR: process.env.APP_POTR,
+    APP_URL: process.env.APP_URL,
     LOG_FORMAT: process.env.LOG_FORMAT,
     DB_USERNAME: process.env.DB_USERNAME,
     DB_PASSWORD: process.env.DB_PASSWORD,

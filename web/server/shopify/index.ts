@@ -1,37 +1,9 @@
 import { LATEST_API_VERSION } from '@shopify/shopify-api'
 import { ShopifyApp as ShopifyAppInterface, shopifyApp } from '@shopify/shopify-app-express'
-import { MySQLSessionStorage } from '@shopify/shopify-app-session-storage-mysql'
 import { Env } from '#configs/env'
+import { shopifyDevConfig, shopifyProdConfig } from '#server/configs/shopify'
 
-let { restResources } = await import(`@shopify/shopify-api/rest/admin/${LATEST_API_VERSION}`)
-
-const shopify: ShopifyAppInterface = shopifyApp({
-    api: {
-        apiKey: Env.SHOPIFY_API_KEY,
-        apiSecretKey: Env.SHOPIFY_API_SECRET || '',
-        scopes: Env.SCOPES,
-        hostScheme: 'https',
-        hostName: `your-domain:${Env.PORT}`,
-        apiVersion: LATEST_API_VERSION,
-        restResources,
-        future: {
-            customerAddressDefaultFix: true,
-            lineItemBilling: true,
-            unstable_managedPricingSupport: true,
-        },
-        billing: undefined,
-    },
-    auth: {
-        path: '/api/auth',
-        callbackPath: '/api/auth/callback',
-    },
-    webhooks: {
-        path: '/api/webhooks',
-    },
-    sessionStorage: MySQLSessionStorage.withCredentials(Env.DB_HOST, Env.DB_NAME, Env.DB_USERNAME, Env.DB_PASSWORD, {
-        connectionPoolLimit: 20,
-    }),
-})
+const shopify: ShopifyAppInterface = Env.NODE_ENV === 'production' ? shopifyApp(shopifyProdConfig) : shopifyApp(shopifyDevConfig)
 
 export { shopify }
 export const apiVersion = LATEST_API_VERSION
