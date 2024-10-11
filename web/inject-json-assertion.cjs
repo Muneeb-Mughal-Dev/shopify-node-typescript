@@ -1,8 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
-// Path to your compiled files
-const distDir = path.join(__dirname, 'app/server')
+const distDir = path.join(__dirname, 'build/server')
 
 function injectAssertions() {
     fs.readdir(distDir, (err, files) => {
@@ -14,13 +13,11 @@ function injectAssertions() {
                 fs.readFile(filePath, 'utf8', (err, data) => {
                     if (err) throw err
 
-                    // Modify the file content
                     const modifiedData = data.replace(
                         /import\s+apiDocs\s+from\s+['"](.+?)['"]/,
                         `import apiDocs from "$1" assert { type: "json" }`,
                     )
 
-                    // Write the modified content back to the file
                     fs.writeFile(filePath, modifiedData, 'utf8', (err) => {
                         if (err) throw err
                     })

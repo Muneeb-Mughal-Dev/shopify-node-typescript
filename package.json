@@ -6,7 +6,7 @@
   "scripts": {
     "vite:dev": "vite",
     "shopify": "shopify",
-    "app:deploy": "node deploy.cjs",
+    "app:build": "node deploy.cjs",
     "info": "shopify app info",
     "vite:build": "vite build",
     "shopify:dev": "shopify app dev",
