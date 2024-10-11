@@ -16,7 +16,10 @@ const app = express()
 ;(async () => {
     /***     If you are adding routes outside of the /api path, remember to also add a proxy rule for them in web/frontend/vite.config.js ***/
     app.use(express.json())
-    app.use('/docs', swaggerUi.serve, swaggerUi.setup(apiDocs))
+  
+    if (Env.NODE_ENV === 'development') {
+        app.use('/docs', swaggerUi.serve, swaggerUi.setup(apiDocs))
+    }
 
     const initializeErrorHandling = async () => {
         app.use(ErrorMiddleware)
