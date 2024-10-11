@@ -30,6 +30,8 @@ config/tunnel.pid
 # build output
 dist
 build
+tsconfig.app.tsbuildinfo
+tsconfig.node.tsbuildinfo
 
 # extensions build output
 extensions/*/build
