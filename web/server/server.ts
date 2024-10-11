@@ -16,7 +16,7 @@ const app = express()
 ;(async () => {
     /***     If you are adding routes outside of the /api path, remember to also add a proxy rule for them in web/frontend/vite.config.js ***/
     app.use(express.json())
-  
+
     if (Env.NODE_ENV === 'development') {
         app.use('/docs', swaggerUi.serve, swaggerUi.setup(apiDocs))
     }
@@ -58,17 +58,31 @@ const app = express()
         logger.info(`============================================`)
         logger.info(`============================================`)
     })
-    app.listen(await getUniquePort(), async () => {
-        logger.info(`============================================`)
-        logger.info(`============================================`)
-        logger.info(`🚀 ======= APP IS UP AND RUNNING ======== 🚀`)
-        logger.info(`============================================`)
-        logger.info(`============ ENV PORT IS  ${Env.APP_POTR} ============`)
-        logger.info(`============================================`)
-        logger.info(`🚀 SWAGGER == http://localhost:${Env.APP_POTR}/docs 🚀`)
-        logger.info(`============================================`)
-        logger.info(`============================================`)
-    })
+    if (Env.NODE_ENV === 'production') {
+        app.listen(Env.APP_URL_PORT, async () => {
+            logger.info(`============================================`)
+            logger.info(`============================================`)
+            logger.info(`🚀 ======= APP IS UP AND RUNNING ======== 🚀`)
+            logger.info(`============================================`)
+            logger.info(`============ ENV PORT IS  ${Env.APP_URL_PORT} ============`)
+            logger.info(`============================================`)
+            logger.info(`🚀 SWAGGER == http://localhost:${Env.APP_URL_PORT}/docs 🚀`)
+            logger.info(`============================================`)
+            logger.info(`============================================`)
+        })
+    } else {
+        app.listen(await getUniquePort(), async () => {
+            logger.info(`============================================`)
+            logger.info(`============================================`)
+            logger.info(`🚀 ======= APP IS UP AND RUNNING ======== 🚀`)
+            logger.info(`============================================`)
+            logger.info(`============ ENV PORT IS  ${Env.APP_POTR} ============`)
+            logger.info(`============================================`)
+            logger.info(`🚀 SWAGGER == http://localhost:${Env.APP_POTR}/docs 🚀`)
+            logger.info(`============================================`)
+            logger.info(`============================================`)
+        })
+    }
 
     await initializeErrorHandling()
 })()
